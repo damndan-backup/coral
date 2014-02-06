@@ -1,4 +1,4 @@
-coral
-=====
+Lab 5
+====
 
-CS147 Assignment – Daniel Liem, Justin Wiguna, Ryan Perez
+Lab 5: Putting it together
