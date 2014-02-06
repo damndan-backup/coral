@@ -2,14 +2,15 @@
 
 <html>
 <head>
-	<title>My HCI Friends</title>	
+	<title>New Web Page</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="css/hci-friends.css">
+
+	<link href="css/ionic.css" rel="stylesheet">
+	<link href="css/ionic.min.css" rel="stylesheet">
 
 
+	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,41 +22,19 @@
 
 <body>
 
-	<div class="container">
-		<h1>My HCI Friends</h1>
-
-		{{#each friends}}
-		<div class="friend">
-			<img class="img-responsive img-rounded" src="{{imageURL}}" />
-			<h3><a href="#" class="friendNamed">{{name}}</a></h3>
-			<p>{{description}}</p>
-			<hr>
-		</div>
-		{{/each}}
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+	<label class="item item-input">
+	  <span class="input-label">Web Name:</span>
+	  <a href="newWeb.html"><input type="text"></a>
+	</label>
 
 
-		<form id="addFriendForm" role="form" method="get" action="/add">
-			<h3>Add a friend</h3>
-		    <div class="form-group">
-		      <label for="name">Name:</label>
-		      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
-		    </div>
-		    <div class="form-group">
-		      <label for="description">Description:</label>
-		      <input type="text" class="form-control" id="description" placeholder="Description" name="description">
-		    </div>
-		    <a href="/add">
-		    	<input  type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
-			</a>
-		</form>
-		<br><br>
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-	</div>
-
-
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/hci-friends.js"></script>
-	
+	<script src="js/ionic-angular.js"></script>
+	<script src="js/ionic-angular.min.js"></script>
+	<script src="js/ionic.js"></script>
+	<script src="js/ionic.min.js"></script>
 </body>
 </html>
