@@ -2,12 +2,12 @@
 
 <html>
 <head>
-	<title>Web Lists</title>	
+	<title>New Post Page</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="css/ionic.css" rel="stylesheet">
-	<link href="css/ionic.min.css" rel="stylesheet">
+	<link href="../css/ionic.css" rel="stylesheet">
+	<link href="../css/ionic.min.css" rel="stylesheet">
 
 
 	<!-- this is a comment in HTML -->
@@ -25,10 +25,20 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 
-	<div class="bar bar-header bar-calm">
-  		<h1 class="title">Coral</h1>
+
+	<div class="bar bar-header">
+  		<a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
+  		<h1 class="title">Write New Post!</h1>
 	</div>
-	<br><br>
+	<br><br><br>
+
+	<label class="item item-input">
+    	<textarea placeholder="What's new?"></textarea>
+  	</label>
+
+  	<a href="newPost.html">
+		<button class="button button-block button-positive">Submit Post</button>
+	</a>
 
 	<div class="tabs tabs-icon-only">
 	  <a href="homepage.html" class="tab-item">
@@ -47,53 +57,14 @@
 	    <i class="icon ion-ios7-bolt"></i>
 	  </a>
 	</div>
-
-
 	
 
-	<content padding="true">
-		<div class="list">
-			<div class="item item-divider">
-		    Create a New Web
-		 	</div>
 
-		  <a class="item" href="newWeb.html">
-		    + Make New
-		  </a>
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-		  <div class="item item-divider">
-		    Existing Webs
-		  </div>
-
-		  <a class="item" href="newPost.html">
-		    Kingston's CS147
-		  </a>
-
-		  <a class="item" href="newPost.html">
-		    Stanford
-		  </a>
-
-		  <a class="item" href="newPost.html">
-		    Food
-		  </a>
-
-		  <a class="item" href="newPost.html">
-		    Movies
-		  </a>
-
-		  <a class="item" href="newPost.html">
-		    Hobbies
-		  </a>
-
-		</div>
-	</content>
-
-
- 	<script src="https://code.jquery.com/jquery.js"></script>
-
-	<script src="js/ionic-angular.js"></script>
-	<script src="js/ionic-angular.min.js"></script>
-	<script src="js/ionic.js"></script>
-	<script src="js/ionic.min.js"></script>
+	<script src="../js/ionic-angular.js"></script>
+	<script src="../js/ionic-angular.min.js"></script>
+	<script src="../js/ionic.js"></script>
+	<script src="../js/ionic.min.js"></script>
 </body>
 </html>
