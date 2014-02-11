@@ -1,20 +1,10 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
-  "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
-
-  "repository": {
-  	"type": "git",
-  	"url": "https://github.com/StanfordHCI/cs147"
-  },
-  "license": "MIT",
-
-  "main": "server.js",
-  "dependencies": {
-    "express": "3.x"
-  },
-  "engines": {
-  	"node": "0.10.x"
-  }
+    "name": "Coral",
+    "description": "This is an amazing new app to connect you and your friends!",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": ">= 3.4.8",
+        "express3-handlebars": ">= 0.5.0"
+    }
 }
