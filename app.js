@@ -40,6 +40,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
 // Add routes here
 app.get('/', index.view);
 app.get('/homepage.handlebars', homepage.view);
