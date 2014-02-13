@@ -15,6 +15,9 @@ var discover = require('./routes/discover');
 var activity = require('./routes/activity');
 var account = require('./routes/account');
 var web = require('./routes/web');
+//action routes
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -41,6 +44,8 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
+
+//regular page routes
 app.get('/', index.view);
 app.get('/homepage.handlebars', homepage.view);
 app.get('/newPost.handlebars', newPost.view);
@@ -49,6 +54,11 @@ app.get('/discover.handlebars', discover.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
 app.get('/web.handlebars', web.view);
+
+//action routes
+app.get('/addWeb', newWeb.addWeb);
+
+
 // Example route
 // app.get('/users', user.list);
 

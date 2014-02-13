@@ -65,25 +65,11 @@
 		    Existing Webs
 		  </div>
 
-		  <a class="item" href="newPost.handlebars">
-		    Kingston's CS147
-		  </a>
-
-		  <a class="item" href="newPost.handlebars">
-		    Stanford
-		  </a>
-
-		  <a class="item" href="newPost.handlebars">
-		    Food
-		  </a>
-
-		  <a class="item" href="newPost.handlebars">
-		    Movies
-		  </a>
-
-		  <a class="item" href="newPost.handlebars">
-		    Hobbies
-		  </a>
+			{{#each webs}}
+		 		<a class="item" id="{{id}}" href="newPost.handlebars">
+		 			{{title}}
+		 		</a>
+			{{/each}}
 
 		</div>
 	</content>

@@ -1,3 +1,5 @@
+var webs = require("../webs.json");
+
 exports.view = function(req, res){
 	// if(!req.session.uname) {
 	// 	var uname = getUname();
@@ -5,4 +7,14 @@ exports.view = function(req, res){
 	// }
 	res.render('newWeb',{
 	});
+};
+
+exports.addWeb = function(req, res){
+	var newWeb = {
+		"id": webs.length,
+		"title": req.query.title
+	};
+	webs.push(newWeb)
+	res.render('newPost', {		
+	})
 };
