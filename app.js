@@ -53,10 +53,11 @@ app.get('/newWeb.handlebars', newWeb.view);
 app.get('/discover.handlebars', discover.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
-app.get('/web.handlebars', web.view);
+app.get('/web.handlebars/:webID', web.view);
 
 //action routes
 app.get('/addWeb', newWeb.addWeb);
+app.get('/addPost/:webID/:parentID', newPost.addPost);
 
 
 // Example route

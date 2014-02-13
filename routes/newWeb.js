@@ -12,9 +12,13 @@ exports.view = function(req, res){
 exports.addWeb = function(req, res){
 	var newWeb = {
 		"id": webs.length,
-		"title": req.query.title
+		"title": req.query.title,
+		"posts": [
+		]
 	};
 	webs.push(newWeb)
-	res.render('newPost', {		
+	res.render('newPost',{
+		"webID": webs.length - 1,
+		"parentID": "0"
 	})
 };

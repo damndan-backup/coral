@@ -31,15 +31,15 @@
   		<h1 class="title">Write New Post!</h1>
 	</div>
 	<br><br><br>
-
+<form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{parentID}}">
 	<label class="item item-input">
-    	<textarea placeholder="What's new?"></textarea>
+    	<textarea placeholder="What's new?" name="message"></textarea>
   	</label>
 
-  	<a href="web.handlebars">
-		<button class="button button-block button-positive">Submit Post</button>
+  	
+		<button type="submit" class="button button-block button-positive">Submit Post</button>
 	</a>
-
+</form>
 	<div class="tabs tabs-icon-only">
 	  <a href="homepage.handlebars" class="tab-item">
 	    <i class="icon ion-home"></i>
