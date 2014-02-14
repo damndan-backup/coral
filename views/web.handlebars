@@ -16,8 +16,9 @@
   
     var nodes = [
       {{#each node}}
-        {id: {{id}}, label: {{message}} },
+        {id: {{id}}, label: '{{message}}' },
       {{/each}}
+      {id: 0, label: 'Node 0'}
     ];
 
 
@@ -36,6 +37,7 @@
     {{#each node}}
       {from: {{parent}}, to: {{id}} },
     {{/each}}
+    {from: 0, to: 0}
   ];
 
 

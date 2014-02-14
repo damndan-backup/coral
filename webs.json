@@ -6,27 +6,7 @@
 			{
 				"id": 1,
 				"message": "Sports are awesome.",
-				"parent": 1
-			}
-			{
-				"id": 2,
-				"message": "Sports are awesome.",
-				"parent": 1
-			}
-			{
-				"id": 3,
-				"message": "Sports are awesome.",
-				"parent": 1
-			}
-			{
-				"id": 4,
-				"message": "Sports are awesome.",
-				"parent": 2
-			}
-			{
-				"id": 5,
-				"message": "Sports are awesome.",
-				"parent": 3
+				"parent": 0
 			}
 		]
 	},
