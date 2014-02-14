@@ -17,8 +17,12 @@ exports.addWeb = function(req, res){
 		]
 	};
 	webs.push(newWeb)
+
+	var num = webs.length - 1;
+	var webID = num.toString();
+
 	res.render('newPost',{
-		"webID": webs.length - 1,
+		"webID": webID,
 		"parentID": "0"
 	})
 };
