@@ -24,6 +24,7 @@
   font-weight: normal;
   font-style: normal; }
 
+
 .ion, .ion-loading-a,
 .ion-loading-b,
 .ion-loading-c,
@@ -3461,7 +3462,7 @@ a.subdued {
 .bar-header {
   top: 0;
   border-top-width: 0;
-  border-bottom-width: 1px; }
+  border-bottom-width: 0px; }
 
 .bar-footer {
   bottom: 0;
@@ -4266,7 +4267,7 @@ button.item-button-right:after {
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   min-height: 30px;
-  background-color: whitesmoke;
+  background-color: black;
   color: #222222;
   font-weight: bold; }
 

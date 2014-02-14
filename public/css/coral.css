@@ -1,0 +1,19 @@
+#background {
+		background-image:url('https://dl.dropboxusercontent.com/u/39378312/splash.png');
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+#icon {
+		width: 180px;
+		height: 180px;
+		display: block;
+		margin: 0 auto;
+		margin-top: 60px;
+	}
+
+#header-image {
+	background-image: url('https://dl.dropboxusercontent.com/u/39378312/header_background.png');
+	background-size: cover;
+	z-index: 15;
+}
