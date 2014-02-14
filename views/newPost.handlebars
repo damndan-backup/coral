@@ -8,15 +8,16 @@
 
 	<link href="/css/ionic.css" rel="stylesheet">
 	<link href="/css/ionic.min.css" rel="stylesheet">
+	<link href="/css/coral.css" rel="stylesheet">
      
 </head>
 
 <body>
 
 
-	<div class="bar bar-header">
+	<div id="header-image" class="bar bar-header">
   		<a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
-  		<h1 class="title">Write New Post!</h1>
+  		<h1 style="color: #00ADE6" class="title">Write New Post!</h1>
 	</div>
 	<br><br><br>
 <form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{parentID}}">
@@ -25,7 +26,7 @@
   	</label>
 
   	
-		<button type="submit" class="button button-block button-positive">Submit Post</button>
+		<button type="submit" class="button button-block button-pinkCoral">Submit Post</button>
 	</a>
 </form>
 	<div class="tabs tabs-icon-only">
