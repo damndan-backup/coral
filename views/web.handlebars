@@ -1,16 +1,27 @@
 <!doctype html>
 <html>
 <head>
-  <title>Graph | Basic usage</title>
+  <title>Graph</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/ionic.css" rel="stylesheet">
+  <link href="/css/ionic.min.css" rel="stylesheet">
+  <link href="/css/coral.css" rel="stylesheet">
 
   <script type="text/javascript" src="/js/vis.js"></script>
 </head>
 
 <body>
 
-<div style="background-color: white">
-<div id="mygraph"></div>
+<div id="header-image" class="bar bar-header">
+      <a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
+      <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
 </div>
+
+
+<div id="mygraph"></div>
+
 
 <script type="text/javascript">
   // create an array with nodes
@@ -58,11 +69,18 @@
     edges: edges,
   };
   var options = {
-    width: '1000px',
-    height: '1000px'
+    width: '350px',
+    height: '800px'
   };
   var graph = new vis.Graph(container, data, options);
 </script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+  <script src="/js/ionic-angular.js"></script>
+  <script src="/js/ionic-angular.min.js"></script>
+  <script src="/js/ionic.js"></script>
+  <script src="/js/ionic.min.js"></script>
 
 </body>
 </html>
