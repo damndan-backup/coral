@@ -16,25 +16,25 @@
 
 
 	<div id="header-image" class="bar bar-header bar-blueCoral">
-  		<h1 class="title">Coral</h1>
+  		<h1 id="nexa-light-header" class="title">coral</h1>
 	</div>
 	<br><br>
 
-	<div class="tabs tabs-icon-only">
+	<div id="tab-color" class="tabs tabs-icon-only">
 	  <a href="homepage.handlebars" class="tab-item">
-	    <i class="icon ion-home"></i>
+	    <i id="other-icons" class="icon ion-home"></i>
 	  </a>
 	  <a href="discover.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-search"></i>
+	    <i id="other-icons" class="icon ion-ios7-search"></i>
 	  </a>
-	  <a href="newPost.handlebars" class="tab-item">
+	  <a href="newPost.handlebars" id="compose-icon" class="tab-item">
 	    <i class="icon ion-compose"></i>
 	  </a>
 		  <a href="account.handlebars" class="tab-item">
-	    <i class="icon ion-person"></i>
+	    <i id="other-icons" class="icon ion-person"></i>
 	  </a>
 		  <a href="activity.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-bolt"></i>
+	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
 	  </a>
 	</div>
 
@@ -43,20 +43,20 @@
 
 	<content padding="true">
 		<div class="list">
-			<div class="item item-divider">
+			<div style="background-color: #000b61; color: #00ade6" class="item item-divider">
 		    Create a New Web
 		 	</div>
 
-		  <a class="item" href="newWeb.handlebars">
+		  <a style="background-color: black; color: #cc685d" class="item" href="newWeb.handlebars">
 		    + Make New
 		  </a>
 
-		  <div class="item item-divider">
+		  <div style="background-color: #000b61; color: #00ade6" class="item item-divider">
 		    Existing Webs
 		  </div>
 
 			{{#each webs}}
-		 		<a class="item" id="{{id}}" href="web.handlebars/{{id}}">
+		 		<a style="background-color: black; color: #cc685d" class="item" id="{{id}}" href="web.handlebars/{{id}}">
 		 			{{title}}
 		 		</a>
 			{{/each}}

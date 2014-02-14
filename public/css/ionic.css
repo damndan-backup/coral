@@ -5541,6 +5541,33 @@ input[type="range"] {
       .button.button-pinkCoral.button-outline.active, .button.button-pinkCoral.button-outline:active {
         background-color: #cc685d;
         color: #fff;
+        box-shadow: none; } 
+    .button.button-blueCoral {
+    color: white;
+    background-color: #00ade6;
+    border-color: #00ade6; }
+    .button.button-blueCoral:hover {
+      color: white;
+      text-decoration: none; }
+    .button.button-blueCoral.active, .button.button-blueCoral:active {
+      background-color: #bb473b;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+      border-color: #94382f; }
+    .button.button-blueCoral.button-clear {
+      color: #00ade6;
+      background: none;
+      border-color: transparent;
+      box-shadow: none; }
+    .button.button-blueCoralbutton-icon {
+      background: none;
+      border-color: transparent; }
+    .button.button-blueCoral.button-outline {
+      background: transparent;
+      border-color: #00ade6;
+      color: #00ade6; }
+      .button.button-blueCoral.button-outline.active, .button.button-blueCoral.button-outline:active {
+        background-color: #00ade6;
+        color: #fff;
         box-shadow: none; }      
 
 .button-small {
