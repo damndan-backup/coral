@@ -20,6 +20,25 @@
 </div>
 
 
+<div id="tab-color" class="tabs tabs-icon-only">
+    <a href="homepage.handlebars" class="tab-item">
+      <i id="other-icons" class="icon ion-home"></i>
+    </a>
+    <a href="discover.handlebars" class="tab-item">
+      <i id="other-icons" class="icon ion-ios7-search"></i>
+    </a>
+    <a href="newPost.handlebars" id="compose-icon" class="tab-item">
+      <i class="icon ion-compose"></i>
+    </a>
+      <a href="account.handlebars" class="tab-item">
+      <i id="other-icons" class="icon ion-person"></i>
+    </a>
+      <a href="activity.handlebars" class="tab-item">
+      <i id="other-icons" class="icon ion-ios7-bolt"></i>
+    </a>
+  </div>
+
+
 <div style="background-color: white">
 <div id="mygraph"></div>
 </div>
@@ -30,7 +49,7 @@
   
     var nodes = [
       {{#each node}}
-        {id: {{id}}, label: '{{message}}', shape: 'box'},
+        {id: {{id}}, label: '{{message}}', shape: 'box', radius: 1},
       {{/each}}
       {id: 0, label: ''}
     ];
@@ -51,7 +70,7 @@
     {{#each node}}
       {from: {{parent}}, to: {{id}}, color: '#00ADE6'},
     {{/each}}
-    {from: 0, to: 1, color: '#00ADE6'}  //changed from "0, to 0" to "0, to: 1"
+    //{from: 0, to: 1, color: '#00ADE6'}  //changed from "0, to 0" to "0, to: 1"
   ];
 
 
@@ -70,8 +89,16 @@
     edges: edges,
   };
   var options = {
-    width: '350px',
-    height: '800px',
+    width: '100%',
+    height: '100%',
+    nodes: {
+      fontSize: 12,
+      fontColor: 'white',
+      color: {
+        background: 'black',
+        border: '#cc685d',
+      }
+    }
   };
   var graph = new vis.Graph(container, data, options);
 </script>
