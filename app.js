@@ -14,6 +14,7 @@ var newWeb = require('./routes/newWeb');
 var discover = require('./routes/discover');
 var activity = require('./routes/activity');
 var account = require('./routes/account');
+var accountSettings = require('./routes/accountSettings');
 var web = require('./routes/web');
 //action routes
 
@@ -53,6 +54,7 @@ app.get('/newWeb.handlebars', newWeb.view);
 app.get('/discover.handlebars', discover.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
+app.get('/accountSettings.handlebars', accountSettings.view);
 app.get('/web.handlebars/:webID', web.view);
 
 //action routes
