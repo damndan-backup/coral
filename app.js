@@ -15,6 +15,9 @@ var discover = require('./routes/discover');
 var activity = require('./routes/activity');
 var account = require('./routes/account');
 var accountSettings = require('./routes/accountSettings');
+var changeUsername = require('./routes/changeUsername');
+var changeEmail = require('./routes/changeEmail');
+var changePassword = require('./routes/changePassword');
 var web = require('./routes/web');
 var post = require('./routes/post'); //for when user clicks into post
 //action routes
@@ -56,6 +59,9 @@ app.get('/discover.handlebars', discover.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
 app.get('/accountSettings.handlebars', accountSettings.view);
+app.get('/changeUsername.handlebars', changeUsername.view);
+app.get('/changeEmail.handlebars', changeEmail.view);
+app.get('/changePassword.handlebars', changePassword.view);
 app.get('/web.handlebars/:webID', web.view);
 app.get('/post.handlebars', post.view); //for the view of an individual post
 

@@ -6,4 +6,3 @@ exports.view = function(req, res){
 		"node": data[web]["posts"]
 	});
 };
-
