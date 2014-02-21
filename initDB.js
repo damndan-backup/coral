@@ -58,4 +58,10 @@ function onceClear(err) {
     });
   }
 }
-
+models.Post
+  .find()
+  .remove()
+  .exec(done)
+  function done(err) {
+    if(err) console.log(err);
+  }
