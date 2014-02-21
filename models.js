@@ -4,18 +4,18 @@ var Mongoose = require('mongoose');
 var WebSchema = new Mongoose.Schema({
   "title": String,
   "date": Date,
-  "creator": { type: Schema.Types.ObjectId, ref: 'User' }
+  "creator": String//Mongoose.Schema.ObjectId
 });
 
 var PostSchema = new Mongoose.Schema({
   "message": String,
   "date": Date,
-  "creator": { type: Schema.Types.ObjectId, ref: 'User' }
-  "parent": { type: Schema.Types.ObjectId, ref: 'Post' },
-  "web": { type: Schema.Types.ObjectId, ref: 'Web' }
+  "creator": String,//Mongoose.Schema.ObjectId,
+  "parent": Mongoose.Schema.ObjectId,
+  "web": Mongoose.Schema.ObjectId
 });
 
-varUserSchema = new Mongoose.Schema({
+var UserSchema = new Mongoose.Schema({
 	"name": String,
 	"password": String
 	//Followers and Following

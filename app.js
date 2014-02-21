@@ -6,11 +6,10 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-var mongoose = require('mongoose'); //just added
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var homepage = require('./routes/homepage');
-var newPost = require('./routes/newPost');
 var newWeb = require('./routes/newWeb');
 var discover = require('./routes/discover');
 var activity = require('./routes/activity');
@@ -61,7 +60,6 @@ if ('development' == app.get('env')) {
 //regular page routes
 app.get('/', index.view);
 app.get('/homepage.handlebars', homepage.view);
-app.get('/newPost.handlebars', newPost.view);
 app.get('/newWeb.handlebars', newWeb.view);
 app.get('/discover.handlebars', discover.view);
 app.get('/activity.handlebars', activity.view);
@@ -71,11 +69,11 @@ app.get('/changeUsername.handlebars', changeUsername.view);
 app.get('/changeEmail.handlebars', changeEmail.view);
 app.get('/changePassword.handlebars', changePassword.view);
 app.get('/web.handlebars/:webID', web.view);
-app.get('/post.handlebars', post.view); //for the view of an individual post
+app.get('/post.handlebars/webID/:parentID', post.view); //for the view of an individual post
 
 //action routes
 app.get('/addWeb', newWeb.addWeb);
-app.get('/addPost/:webID/:parentID', newPost.addPost);
+app.get('/addPost/:webID/:parentID', post.addPost);
 
 
 // Example route
