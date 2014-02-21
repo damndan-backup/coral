@@ -1,4 +1,4 @@
-var webs = require("../webs.json");
+var models = require("../models");
 exports.view = function(req, res){
 	res.render('newPost',{
 	});
@@ -7,12 +7,20 @@ exports.view = function(req, res){
 exports.addPost = function(req, res){
 	var webID = req.params.webID
 	var parentID = req.params.parentID;
-	var newPost = {
-		"id": webs[webID].length + 1,
+	var newPost = new models.Post({
 		"message": req.query.message,
-		"parent": parentID
-	};
-	webs[webID]['posts'].push(newPost)
-	console.log(webs);
-	res.redirect('web.handlebars/' + webID);
+		"date": Date.now,
+		"creator": "me",
+  		"parent": parentID,
+  		"web": webID
+	});
+
+	newPost.save(afterSaving);
+	function afterSaving(err, web) {
+		if(err) {console.log(err); res.send(500); }
+		res.send();
+	}
+	
+	var url = "web.handlebars/" + webID;
+	res.redirect(url);
 };
