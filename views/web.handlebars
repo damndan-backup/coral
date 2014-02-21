@@ -47,31 +47,19 @@
 
 <script type="text/javascript">
   // create an array with nodes
-  
-  
+
     var nodes = [
       {{#each node}}
-        {id: {{id}}, label: '{{message}}', shape: 'box', radius: 1},
+        {id: '{{id}}', label: '{{message}}'},
       {{/each}}
 
     ];
 
-  // create an array with edges
   var edges = [
-    {{#each node}}
-      if ({{parent}} >= 0) {
-        {from: {{parent}}, to: {{id}}, color: '#00ADE6'},
-      }
-    {{/each}}
+     {{#each node}}
+         {from: '{{parent}}', to: '{{_id}}', color: '#00ADE6'},
+     {{/each}}
   ];
-
-  //  // create an array with edges
-  // var edges = [
-  //   {from: 1, to: 2},
-  //   {from: 1, to: 3},
-  //   {from: 2, to: 4},
-  //   {from: 2, to: 5}
-  // ];
 
   // create a graph
   var container = document.getElementById('mygraph');
@@ -96,8 +84,11 @@
   var graph = new vis.Graph(container, data, options);
 
   graph.on('select', function (properties) {
-    window.location.href = "post.handlebars/" + {{web}} + "/" + nodes[0];
+   
+    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
     //lert('selected nodes: ' + properties.nodes);
+    
+
   });
 </script>
 
