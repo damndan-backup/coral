@@ -17,24 +17,23 @@
 <div id="header-image" class="bar bar-header">
       <a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
       <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
-      <a href="../post.handlebars/{{web}}/{{nodes}}" style="color: #00ADE6" class="button button-icon icon ion-ios7-compose-outline"></a>
 </div>
 
 
   <div style="color: white" id="tab-color" class="tabs tabs-icon-top">
-    <a href="../homepage.handlebars" class="tab-item">
+    <a href="homepage.handlebars" class="tab-item">
       <i id="other-icons" class="icon ion-home"></i>
       Home
     </a>
-    <a href="../discover.handlebars" class="tab-item">
+    <a href="discover.handlebars" class="tab-item">
       <i id="other-icons" class="icon ion-ios7-search"></i>
       Discover
     </a>
-    <a href="../account.handlebars" class="tab-item">
+    <a href="account.handlebars" class="tab-item">
       <i id="other-icons" class="icon ion-person"></i>
       Account
     </a>
-    <a href="../activity.handlebars" class="tab-item">
+    <a href="activity.handlebars" class="tab-item">
       <i id="other-icons" class="icon ion-ios7-bolt"></i>
       Activity
     </a>
@@ -53,16 +52,28 @@
       {{#each node}}
         {id: {{id}}, label: '{{message}}', shape: 'box', radius: 1},
       {{/each}}
+      {id: 0, label: ''}
     ];
+
+
+  //     // create an array with nodes
+  // var nodes = [
+  //   {id: 1, label: 'Node 1'},
+  //   {id: 2, label: 'Node 2'},
+  //   {id: 3, label: 'Node 3'},
+  //   {id: 4, label: 'Node 4'},
+  //   {id: 5, label: 'Node 5'}
+  // ];
+  
 
   // create an array with edges
   var edges = [
     {{#each node}}
-      if ({{parent}} >= 0) {
-        {from: {{parent}}, to: {{id}}, color: '#00ADE6'},
-      }
+      {from: {{parent}}, to: {{id}}, color: '#00ADE6'},
     {{/each}}
+    //{from: 0, to: 1, color: '#00ADE6'}  //changed from "0, to 0" to "0, to: 1"
   ];
+
 
   //  // create an array with edges
   // var edges = [
@@ -78,7 +89,6 @@
     nodes: nodes,
     edges: edges,
   };
-
   var options = {
     width: '100%',
     height: '100%',
@@ -91,13 +101,7 @@
       }
     }
   };
-
   var graph = new vis.Graph(container, data, options);
-
-  graph.on('select', function (properties) {
-    window.location.href = "post.handlebars/" + {{web}} + "/" + nodes[0];
-    //lert('selected nodes: ' + properties.nodes);
-  });
 </script>
 
 </body>

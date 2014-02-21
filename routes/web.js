@@ -6,7 +6,6 @@ exports.view = function(req, res){
 	.find( {"web": web} )
 	.exec(afterQuery);
 	function afterQuery(err, nodes) {
-		if(err) {console.log(err); res.send(500); }
 		res.render('web',{
 		"web": web,
 		"node": nodes
