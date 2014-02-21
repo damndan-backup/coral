@@ -8,55 +8,49 @@
 
 	<link href="/css/ionic.css" rel="stylesheet">
 	<link href="/css/ionic.min.css" rel="stylesheet">
+	<link href="/css/coral.css" rel="stylesheet">
 
 
-	<!-- this is a comment in HTML -->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->        
+       
 </head>
 
 <body>
 
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
 
-	<div class="bar bar-header bar-calm">
-  		<h1 class="title">Discover</h1>
+	<div id="header-image" class="bar bar-header bar-blueCoral">
+  		<h1 id="nexa-light-header" class="title">discover</h1>
 	</div>
 	<br><br><br>
+
 
 	<div class="bar bar-header item-input-inset">
 	  <label class="item-input-wrapper">
 	    <i class="icon ion-ios7-search placeholder-icon"></i>
 	    <input type="search" placeholder="Search">
 	  </label>
-	  <button class="button button-clear">
+	  <button class="button button-blueCoral button-clear">
 	    Cancel
 	  </button>
 	</div>
-
-	<div class="tabs tabs-icon-only">
-	  <a href="homepage.handlebars" class="tab-item">
-	    <i class="icon ion-home"></i>
+	
+<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
+	 	<a href="homepage.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-home"></i>
+      Home
 	  </a>
-	  <a href="discover.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-search"></i>
+	 	<a href="discover.handlebars" class="tab-item">
+	  	<i id="other-icons" class="icon ion-ios7-search"></i>
+      Discover
 	  </a>
-	  <a href="newPost.handlebars" class="tab-item">
-	    <i class="icon ion-compose"></i>
+		<a href="account.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-person"></i>
+      Account
 	  </a>
-		  <a href="account.handlebars" class="tab-item">
-	    <i class="icon ion-person"></i>
+		<a href="activity.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
+      Activity
 	  </a>
-		  <a href="activity.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-bolt"></i>
-	  </a>
-	</div>
+		</div>
 
 
   <script src="https://code.jquery.com/jquery.js"></script>

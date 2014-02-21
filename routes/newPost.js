@@ -5,7 +5,7 @@ exports.view = function(req, res){
 };
 
 exports.addPost = function(req, res){
-	var webID = req.params.webID
+	var webID = req.params.webID;
 	var parentID = req.params.parentID;
 	var newPost = new models.Post({
 		"message": req.query.message,

@@ -8,37 +8,38 @@
 
 	<link href="/css/ionic.css" rel="stylesheet">
 	<link href="/css/ionic.min.css" rel="stylesheet">
+	<link href="/css/coral.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 
-	<div class="bar bar-header bar-blueCoral">
-  		<img src="https://dl.dropboxusercontent.com/u/39378312/header_background.png">
-  		<h1 class="title">Coral</h1>
+	<div id="header-image" class="bar bar-header bar-blueCoral">
+  		<h1 id="nexa-light-header" class="title">coral</h1>
 	</div>
 	<br><br>
 
-	<div class="tabs tabs-icon-only">
-	  <a href="homepage.handlebars" class="tab-item">
-	    <i class="icon ion-home"></i>
+		<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
+	 	<a href="homepage.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-home"></i>
+      Home
 	  </a>
-	  <a href="discover.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-search"></i>
+	 	<a href="discover.handlebars" class="tab-item">
+	  	<i id="other-icons" class="icon ion-ios7-search"></i>
+      Discover
 	  </a>
-	  <a href="newPost.handlebars" class="tab-item">
-	    <i class="icon ion-compose"></i>
+		<a href="account.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-person"></i>
+      Account
 	  </a>
-		  <a href="account.handlebars" class="tab-item">
-	    <i class="icon ion-person"></i>
+		<a href="activity.handlebars" class="tab-item">
+	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
+      Activity
 	  </a>
-		  <a href="activity.handlebars" class="tab-item">
-	    <i class="icon ion-ios7-bolt"></i>
-	  </a>
-	</div>
+		</div>
 
-
+	<br>
 	
 
 	<content padding="true">
@@ -65,11 +66,6 @@
 	</content>
 
 
- 	<script src="https://code.jquery.com/jquery.js"></script>
-
-	<script src="/js/ionic-angular.js"></script>
-	<script src="/js/ionic-angular.min.js"></script>
-	<script src="/js/ionic.js"></script>
-	<script src="/js/ionic.min.js"></script>
+	
 </body>
 </html>

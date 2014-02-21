@@ -24,6 +24,7 @@
   font-weight: normal;
   font-style: normal; }
 
+
 .ion, .ion-loading-a,
 .ion-loading-b,
 .ion-loading-c,
@@ -3461,7 +3462,7 @@ a.subdued {
 .bar-header {
   top: 0;
   border-top-width: 0;
-  border-bottom-width: 1px; }
+  border-bottom-width: 0px; }
 
 .bar-footer {
   bottom: 0;
@@ -4266,7 +4267,7 @@ button.item-button-right:after {
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   min-height: 30px;
-  background-color: whitesmoke;
+  background-color: black;
   color: #222222;
   font-weight: bold; }
 
@@ -5539,6 +5540,33 @@ input[type="range"] {
       color: #cc685d; }
       .button.button-pinkCoral.button-outline.active, .button.button-pinkCoral.button-outline:active {
         background-color: #cc685d;
+        color: #fff;
+        box-shadow: none; } 
+    .button.button-blueCoral {
+    color: white;
+    background-color: #00ade6;
+    border-color: #00ade6; }
+    .button.button-blueCoral:hover {
+      color: white;
+      text-decoration: none; }
+    .button.button-blueCoral.active, .button.button-blueCoral:active {
+      background-color: #bb473b;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+      border-color: #94382f; }
+    .button.button-blueCoral.button-clear {
+      color: #00ade6;
+      background: none;
+      border-color: transparent;
+      box-shadow: none; }
+    .button.button-blueCoralbutton-icon {
+      background: none;
+      border-color: transparent; }
+    .button.button-blueCoral.button-outline {
+      background: transparent;
+      border-color: #00ade6;
+      color: #00ade6; }
+      .button.button-blueCoral.button-outline.active, .button.button-blueCoral.button-outline:active {
+        background-color: #00ade6;
         color: #fff;
         box-shadow: none; }      
 
