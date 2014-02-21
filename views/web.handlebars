@@ -107,8 +107,7 @@
   var graph = new vis.Graph(container, data, options);
 
   graph.on('select', function (properties) {
-    console.log("test");
-    window.location.href = "newPost.handlebars/1/" + nodes[0];
+    window.location.href = "post.handlebars/" + {{web}} + "/" + nodes[0];
     //lert('selected nodes: ' + properties.nodes);
   });
 </script>

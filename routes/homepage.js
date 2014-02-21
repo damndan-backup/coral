@@ -1,7 +1,14 @@
-var webs = require('../webs.json');
+var models = require("../models");
 
 exports.view = function(req, res){
-	res.render('homepage',{
-		'webs': webs
-	});
+	models.Web
+	.find( {} )
+	.sort('-date')
+	.exec(goToHomepage);
+
+	function goToHomepage(err, webs) {
+		res.render('homepage',{
+			'webs': webs
+		});
+	}
 };
