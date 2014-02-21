@@ -1,9 +1,21 @@
 var models = require("../models");
+var mongoose = require("mongoose");
 exports.view = function(req, res){
-	res.render('post',{
-		"webID": req.params.webID,
-		"parentID": req.params.parentID
-	});
+	var webID = req.params.webID;
+	var parentID = mongoose.Types.ObjectId(req.params.parentID);
+
+	models.Post
+	.find( {"_id": parentID} )
+	.exec(goToPosts);
+	function goToPosts(err, post) {
+		if(err) {console.log(err); res.send(500); }
+		console.log("post is " + post);
+		res.render('post',{
+			"webID": req.params.webID,
+			"parentID": req.params.parentID,
+			"message": post[0]['message']
+		});
+	}
 };
 
 exports.addPost = function(req, res){

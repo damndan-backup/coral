@@ -43,6 +43,14 @@
 	
 	<div class="list card">
 
+<form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{parentID}}">
+	<label class="item item-input">
+    	<textarea placeholder="What's new?" name="message"></textarea>
+  	</label>
+
+		<button type="submit" class="button button-block button-pinkCoral">Submit Post</button>
+</form>
+
   <div class="item item-avatar">
     <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
     <h2>Justin Wiguna</h2>
@@ -51,7 +59,7 @@
 
   <div class="item item-body">
     <p>
-      There are about 300 million people in the United States. But most of those people live on either the west or the east coast, resulting in a rather empty midwest.
+      {{message}}
     </p>
     <p>
       <a href="#" class="subdued">1 Like</a>
@@ -75,14 +83,7 @@
   </div>
 
 </div>
-<form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{parentID}}">
-	<label class="item item-input">
-    	<textarea placeholder="What's new?" name="message"></textarea>
-  	</label>
 
-  	
-		<button type="submit" class="button button-block button-pinkCoral">Submit Post</button>
-</form>
 
 	<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
 	 	<a href="homepage.handlebars" class="tab-item">
