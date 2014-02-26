@@ -26,7 +26,6 @@ exports.addWeb = function(req, res){
 		.exec(goToWeb);
 		function goToWeb(err, web) {
 			if(err) {console.log(err); res.send(500); }
-			console.log(web);
 			var url = "/addPost/" + web[0]['id'] + "/-1";
 			
 			res.redirect(url);
