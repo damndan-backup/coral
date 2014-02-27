@@ -17,39 +17,12 @@
 	<link href="/css/coral.css" rel="stylesheet">
 
 
-	<style>
-
-	.navbutton {
-		width: 22%;
-	}
-
-	.bottom-holder {
-    	text-align: center;
-    	width: 100%;
-    	margin: auto;
-    	background: rgba(102, 153, 255, 0.9);
-		padding-top: 5px;
-		padding-bottom: 5px;
-		position: fixed;
-		bottom: 0px;
-	}
-
-	.new-web-div {
-		width: 100%;
-		height: 70px;
-		margin: auto;
-		position: fixed;
-		top: 0px;
-
-	}
-
-	</style>
 </head>
 
 <body>
 
 <!-- Header -->
-	<div id="header-image" class="new-web-div">
+	<div id="header-image" class="header-gen">
   		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">coral</h1>
 	</div>
 
@@ -57,35 +30,39 @@
 	<div class="bottom-holder">
         <div class="btn-toolbar">
            <!-- <div class="btn-group"> -->
-            <a class="navbutton btn btn-inverse" href="#"><span class="fui-time"></span></a>
-            <a class="navbutton btn btn-inverse" href="#"><span class="fui-photo"></span></a>
-            <a class="navbutton btn btn-inverse" href="#"><span class="fui-heart"></span></a>
-            <a class="navbutton btn btn-inverse" href="#"><span class="fui-eye"></span></a>
+            <a class="navbutton btn btn-inverse" href="homepage.handlebars"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="account.handlebars"><span class="fui-user"></span></a>
+            <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
         </div> 
     </div>
-
-
 
 	<content>
 		<div>
 
-		<br><br><br><br>
-
-		 	 <a href="newWeb.handlebars">+ Make New</a>
+		<br><br><br>
 
 
-<br><br><br>
+		<div class="section-name">
+		    <div class="section-text">Create New Web</div>
+		</div>
+		
+
+		 	 <a class="section-text" href="newWeb.handlebars">+ Make New</a>
+
+
 			
 
-		  <div>
-		    Existing Webs
+		  <div class="section-name">
+		    <div class="section-text">Existing Webs</div>
 		  </div>
+
 		  
 
 			{{#each webs}}
-		 		<a id="{{id}}" href="web.handlebars/{{id}}">
+		 		<a class="section-text" id="{{id}}" href="web.handlebars/{{id}}">
 		 			{{title}}
 		 		</a>
+		 		<br>
 			{{/each}}
 
 		</div>
