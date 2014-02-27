@@ -11,7 +11,8 @@
 
 #nexa-light-header {
 	font-family: 'nexa_light';
-	font-size: 28px;
+	font-size: 36px;
+	text-align: center;
 }
 
 @font-face {
@@ -49,6 +50,7 @@
 	background-image: url('https://dl.dropboxusercontent.com/u/39378312/header_background.png');
 	background-size: cover;
 	z-index: 15;
+	opacity: 0.8;
 }
 
 #compose-icon {

@@ -6,58 +6,84 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/css/ionic.css" rel="stylesheet">
-	<link href="/css/ionic.min.css" rel="stylesheet">
+    <!-- Loading Bootstrap -->
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="/css/flat/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/images/flat/favicon.ico">
+
 	<link href="/css/coral.css" rel="stylesheet">
 
+
+	<style>
+
+	.navbutton {
+		width: 22%;
+	}
+
+	.bottom-holder {
+    	text-align: center;
+    	width: 100%;
+    	margin: auto;
+    	background: rgba(102, 153, 255, 0.9);
+		padding-top: 5px;
+		padding-bottom: 5px;
+		position: fixed;
+		bottom: 0px;
+	}
+
+	.new-web-div {
+		width: 100%;
+		height: 70px;
+		margin: auto;
+		position: fixed;
+		top: 0px;
+
+	}
+
+	</style>
 </head>
 
 <body>
 
-
-	<div id="header-image" class="bar bar-header bar-blueCoral">
-  		<h1 id="nexa-light-header" class="title">coral</h1>
+<!-- Header -->
+	<div id="header-image" class="new-web-div">
+  		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">coral</h1>
 	</div>
-	<br><br>
 
-		<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
-	 	<a href="homepage.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-home"></i>
-      Home
-	  </a>
-	 	<a href="discover.handlebars" class="tab-item">
-	  	<i id="other-icons" class="icon ion-ios7-search"></i>
-      Discover
-	  </a>
-		<a href="account.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-person"></i>
-      Account
-	  </a>
-		<a href="activity.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
-      Activity
-	  </a>
-		</div>
+<!-- Bottom Nav Bar -->	
+	<div class="bottom-holder">
+        <div class="btn-toolbar">
+           <!-- <div class="btn-group"> -->
+            <a class="navbutton btn btn-inverse" href="#"><span class="fui-time"></span></a>
+            <a class="navbutton btn btn-inverse" href="#"><span class="fui-photo"></span></a>
+            <a class="navbutton btn btn-inverse" href="#"><span class="fui-heart"></span></a>
+            <a class="navbutton btn btn-inverse" href="#"><span class="fui-eye"></span></a>
+        </div> 
+    </div>
 
-	<br>
-	
 
-	<content padding="true">
-		<div class="list">
-			<div class="item item-divider">
-		    Create a New Web
-		 	</div>
 
-		  <a class="item" href="newWeb.handlebars">
-		    + Make New
-		  </a>
+	<content>
+		<div>
 
-		  <div class="item item-divider">
+		<br><br><br><br>
+
+		 	 <a href="newWeb.handlebars">+ Make New</a>
+
+
+<br><br><br>
+			
+
+		  <div>
 		    Existing Webs
 		  </div>
+		  
 
 			{{#each webs}}
-		 		<a class="item" id="{{id}}" href="web.handlebars/{{id}}">
+		 		<a id="{{id}}" href="web.handlebars/{{id}}">
 		 			{{title}}
 		 		</a>
 			{{/each}}
@@ -65,12 +91,19 @@
 		</div>
 	</content>
 
-<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
 
-	<script src="/js/ionic.js"></script>
-	<script src="/js/ionic.min.js"></script>
-	<script src="/js/ionic-angular.js"></script>
-	<script src="/js/ionic-angular.min.js"></script>
+	 <!-- Load JS here for greater good =============================-->
+    <script src="/js/flat/jquery-1.8.3.min.js"></script>
+    <script src="/js/flat/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/flat/jquery.ui.touch-punch.min.js"></script>
+    <script src="/js/flat/bootstrap.min.js"></script>
+    <script src="/js/flat/bootstrap-select.js"></script>
+    <script src="/js/flat/bootstrap-switch.js"></script>
+    <script src="/js/flat/flatui-checkbox.js"></script>
+    <script src="/js/flat/flatui-radio.js"></script>
+    <script src="/js/flat/jquery.tagsinput.js"></script>
+    <script src="/js/flat/jquery.placeholder.js"></script>
 	
 
 	
