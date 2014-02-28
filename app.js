@@ -19,7 +19,10 @@ var changeEmail = require('./routes/changeEmail');
 var changePassword = require('./routes/changePassword');
 var web = require('./routes/web');
 var post = require('./routes/post'); //for when user clicks into post
+
 //action routes
+var login = require('./routes/login');
+//var createAccount = require('./routes/createAccount');
 
 
 // Example route
@@ -69,10 +72,15 @@ app.get('/changePassword.handlebars', changePassword.view);
 app.get('/web.handlebars/:webID', web.view);
 app.get('/post.handlebars/:webID/:postID', post.view); //for the view of an individual post
 app.get('/webalt.handlebars/:webID', web.altview);
+app.get('/login.handlebars', login.view);
+//app.get('/createAccount.handlebars', createAccount.view);
+
 
 //action routes
 app.get('/addWeb', newWeb.addWeb);
 app.get('/addPost/:webID/:parentID', post.addPost);
+//app.get('/loginFunction', login.loginFunction);
+//app.get('/create', createAccount.create);
 
 
 // Example route

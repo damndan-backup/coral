@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>New Web Name</title>	
+	<title>Login</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -27,7 +27,7 @@
 <!-- Header -->
 	<div id="header-image" class="header-gen">
 		<!--<a href="homepage.handlebars"><button></button></a>-->
-		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">create new web</h1>
+		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">login</h1>
 	</div>
 
 <!-- Bottom Nav Bar -->	
@@ -46,19 +46,20 @@
 	<br><br><br>
 
 
-<div class="new-web-form">
-	<form role="form" method="get" action="/addWeb" class="new-web-form">
+	<div class="new-web-form">
+	<form role="form" method="get" action="/loginFunction">
+		<span>Username</span>
+	  	<input type="text" name="title" class="form-control"/>
+	  	<span>Password</span>
+	  	<input type="password" name="title" class="form-control"/>
 
-	  	<input type="text" placeholder="Name your web" name="title" class="form-control"/>
-
-	  	<button type="submit" class="submit-button btn btn-embossed btn-inverse">Create Web</button>
+	  	<button type="submit" class="submit-button btn btn-embossed btn-inverse" style="margin-top: 30px">Login</button>
 
 	</form>
-</div>
-
-	<div class="center">
-		<a href="javascript:history.back()"><button class="cancel-button btn btn-embossed btn-info">Cancel</button></a>
 	</div>
+
+
+	
 
 
 

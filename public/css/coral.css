@@ -161,3 +161,27 @@ img.cover-photo {
 		background: #bdbdbd;
 		border-bottom: 1px solid #5e5e5e;
 	}
+
+	.new-web-form {
+		width: 96%;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 0;
+	}
+	
+	.submit-button {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.cancel-button {
+		width: 96%;
+		opacity: 0.5;
+	}

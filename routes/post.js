@@ -57,9 +57,10 @@ exports.addPost = function(req, res){
 			function afterSaving(err, post) {
 				if(err) {console.log(err); res.send(500); }
 				console.log("new post is " + post);
-				res.send();
+				var url = "web.handlebars/" + webID;
+				res.redirect(url);
 			}
+			res.send();
 	}
-		var url = "web.handlebars/" + webID;
-		res.redirect(url);
+
 }
