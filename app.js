@@ -22,7 +22,7 @@ var post = require('./routes/post'); //for when user clicks into post
 
 //action routes
 var login = require('./routes/login');
-//var createAccount = require('./routes/createAccount');
+var createAccount = require('./routes/createAccount');
 
 
 // Example route
@@ -73,7 +73,7 @@ app.get('/web.handlebars/:webID', web.view);
 app.get('/post.handlebars/:webID/:postID', post.view); //for the view of an individual post
 app.get('/webalt.handlebars/:webID', web.altview);
 app.get('/login.handlebars', login.view);
-//app.get('/createAccount.handlebars', createAccount.view);
+app.get('/createAccount.handlebars', createAccount.view);
 
 
 //action routes
