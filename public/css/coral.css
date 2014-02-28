@@ -145,6 +145,7 @@ img.cover-photo {
 	padding-bottom: 5px;
 	position: fixed;
 	bottom: 0px;
+	z-index: 20;
 }
 
 
