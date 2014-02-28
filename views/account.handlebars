@@ -6,8 +6,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/css/ionic.css" rel="stylesheet">
-	<link href="/css/ionic.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	 <!-- Loading Bootstrap -->
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="/css/flat/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/images/flat/favicon.ico">
+
 	<link href="/css/coral.css" rel="stylesheet">
 
 </head>
@@ -15,73 +23,48 @@
 <body>
 
 
-	<div id="header-image" class="bar bar-header bar-blueCoral">
-  		<h1 id="nexa-light-header" class="title">account</h1>
-  		<a href="accountSettings.handlebars" class="button button-icon icon ion-gear-a profile-settings"></a>
+<!-- Header -->
+	<div id="header-image" class="header-gen">
+  		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">account</h1>
 	</div>
-	<br><br>
 
-<div>
-	<img class="cover-photo" src="https://dl.dropboxusercontent.com/u/39378312/coverphoto_default.png">
-	<img class="profile-pic" src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-	<h6 class="profile-name">Justin Wiguna</h6>
-	<p class="profile-description">Bringing the most interesting facts to your webs</p>
-	<div class="profile-buttons button-bar">
-  		<button class="button icon-left button-outline button-pinkCoral">Posts</button>
-  		<button class="button icon-left button-outline button-pinkCoral">Followers</button>
-  		<button class="button icon-left button-outline button-pinkCoral">Following</button>
-	</div>
-</div>
+<!-- Bottom Nav Bar -->	
+	<div class="bottom-holder">
+        <div class="btn-toolbar">
+           <!-- <div class="btn-group"> -->
+            <a class="navbutton btn btn-inverse" href="homepage.handlebars"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="account.handlebars"><span class="fui-user"></span></a>
+            <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
+        </div> 
+    </div>
 
-<div class="list">
-
-	<a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>Himalayan salt lamps release ions to help cleanse the air around you. You should buy one. #lights #clean</p>
-    </a>
-
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>When creating a new design, it's extremely helpful to reference other existing designs that you like and combining them. #design #hci</p>
-    </a>
-
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>The best boba you can get is from Fantasia in Cupertino. They use real tea! #boba #tea #cupertino</p>
-    </a>
+	<br><br><br>
 
 
-</div>
+    <div class="section-name">
+        <div class="section-text">Logged in as</div>
+    </div>
 
+    <div class="user-name">
+      <p>danielcliem</p>
+    </div>
 
-<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
-	 	<a href="homepage.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-home"></i>
-      Home
-	  </a>
-	 	<a href="discover.handlebars" class="tab-item">
-	  	<i id="other-icons" class="icon ion-ios7-search"></i>
-      Discover
-	  </a>
-		<a href="account.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-person"></i>
-      Account
-	  </a>
-		<a href="activity.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
-      Activity
-	  </a>
-		</div>
+    <div class="new-web-form"
+    <a href="#"><button type="submit" class="submit-button btn btn-embossed btn-info" style="opacity: 0.7">Log Out</button></a>
+  </div>
 
+	<script src="https://code.jquery.com/jquery.js"></script>
 
-  <script src="https://code.jquery.com/jquery.js"></script>
-
-	<script src="/js/ionic-angular.js"></script>
-	<script src="/js/ionic-angular.min.js"></script>
-	<script src="/js/ionic.js"></script>
-	<script src="/js/ionic.min.js"></script>
+	 <!-- Load JS here for greater good =============================-->
+    <script src="/js/flat/jquery-1.8.3.min.js"></script>
+    <script src="/js/flat/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/flat/jquery.ui.touch-punch.min.js"></script>
+    <script src="/js/flat/bootstrap.min.js"></script>
+    <script src="/js/flat/bootstrap-select.js"></script>
+    <script src="/js/flat/bootstrap-switch.js"></script>
+    <script src="/js/flat/flatui-checkbox.js"></script>
+    <script src="/js/flat/flatui-radio.js"></script>
+    <script src="/js/flat/jquery.tagsinput.js"></script>
+    <script src="/js/flat/jquery.placeholder.js"></script>
 </body>
 </html>

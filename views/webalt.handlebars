@@ -20,23 +20,23 @@
 
 <body>
 
-<div id="header-image" class="bar bar-header">
-      <a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
-      <h1 id="nexa-light-header" style="color: #00ADE6" class="title">Web</h1>
-</div>
+  
 
 <!-- Header -->
   <div id="header-image" class="header-gen">
       <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
+      <div class="section-name">
+        <div class="section-text">Click on any node to create new post</div>
+  </div>
   </div>
 
 <!-- Bottom Nav Bar --> 
-  <div id="move" class="bottom-holder" style="z-index: 1000">
+  <div id="move" class="bottom-holder">
         <div class="btn-toolbar">
            <!-- <div class="btn-group"> -->
-            <a class="navbutton btn btn-inverse" href="../../homepage.handlebars"><span class="fui-play"></span></a>
-            <a class="navbutton btn btn-inverse" href="../../account.handlebars"><span class="fui-user"></span></a>
-            <a class="navbutton btn btn-inverse" href="../../activity.handlebars"><span class="fui-eye"></span></a>
+            <a class="navbutton btn btn-inverse" href="homepage.handlebars"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="account.handlebars"><span class="fui-user"></span></a>
+            <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
         </div> 
     </div>
 
@@ -52,6 +52,7 @@
       {{#each node}}
         {id: '{{id}}', label: '{{message}}'},
       {{/each}}
+     {id: 0, label: ''}
     ];
 
 
@@ -79,17 +80,14 @@
       }
     }
   };
-
   var graph = new vis.Graph(container, data, options);
 
   graph.on('select', function (properties) {
-
-  if (confirm('Post to this node?')) {
-    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
-} else {
-
-}
    
+    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
+    //lert('selected nodes: ' + properties.nodes);
+    
+
   });
 </script>
 

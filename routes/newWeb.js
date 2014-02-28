@@ -17,8 +17,8 @@ exports.addWeb = function(req, res){
 		"creator": "me"
 	});
 	newWeb.save(afterSaving);
-	function afterSaving(err, web) {
-		if(err) {console.log(err); res.send(500); }
+	
+	
 		
 		models.Web
 		.find( {} )
@@ -26,9 +26,18 @@ exports.addWeb = function(req, res){
 		.exec(goToWeb);
 		function goToWeb(err, web) {
 			if(err) {console.log(err); res.send(500); }
-			var url = "/addPost/" + web[0]['id'] + "/-1";
-			
+			var newPost = new models.Post({
+				"message": "Create New Post!",
+				"date": date.getTime(),
+				"creator": "me",
+  				"parent": "-1",
+  				"web": web[0]['id']
+			});
+			newPost.save(afterSaving);
+			var url = "/web.handlebars/" + web[0]['id'];
 			res.redirect(url);
 		}
-	}
+		function afterSaving(err, web) {
+			if(err) {console.log(err); res.send(500); }
+		}
 };
