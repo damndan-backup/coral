@@ -43,3 +43,8 @@ exports.unfollow = function(req, res){
 		res.redirect("account.handlebars/" + followee);
 	}
 }
+
+exports.logOut = function(req, res){
+	req.session.userID = null;
+	res.redirect("login.handlebars");
+}

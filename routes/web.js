@@ -9,7 +9,7 @@ exports.view = function(req, res){
 		if(err) {console.log(err); res.send(500); }
 		res.render('web',{
 		"web": web,
-		"node": nodes.
+		"node": nodes,
 		"userID": req.session.userID
 	});
 	}
