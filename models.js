@@ -17,7 +17,7 @@ var PostSchema = new Mongoose.Schema({
 
 var UserSchema = new Mongoose.Schema({
 	"name": String,
-	"password": String
+	"password": String,
 	"followers": [ { type: String} ],
 	"following": [ { type: String} ]
 });
