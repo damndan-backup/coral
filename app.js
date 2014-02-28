@@ -79,8 +79,8 @@ app.get('/createAccount.handlebars', createAccount.view);
 //action routes
 app.get('/addWeb', newWeb.addWeb);
 app.get('/addPost/:webID/:parentID', post.addPost);
-//app.get('/loginFunction', login.loginFunction);
-//app.get('/create', createAccount.create);
+app.get('/loginFunction', login.loginFunction);
+app.get('/create', createAccount.create);
 
 
 // Example route

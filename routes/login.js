@@ -3,8 +3,16 @@ var mongoose = require("mongoose");
 var ObjectId = mongoose.Types.ObjectId;
 
 exports.view = function(req, res){
+	models.User
+	.find( {} )
+	.exec(checkLogin);
+
+	function checkLogin(err, user) {
+		if(err) {console.log(err); res.send(500); }
+		console.log("users length is " + user);
 	res.render('login', {	
 		});
+}
 }
 exports.loginFunction = function(req, res){
 	var name = req.query.name;
@@ -16,10 +24,11 @@ exports.loginFunction = function(req, res){
 
 	function checkLogin(err, user) {
 		if(err) {console.log(err); res.send(500); }
+		console.log("users length is " + user);
 		if(user.length > 0) {
 			var userID = user[0]['_id'];
 			req.session.userID = userID;
-			url = /homepage/ + userID;
+			url = /homepage.handlebars/ + userID;
 			res.redirect(url);
 		}else {
 			res.render("login", {

@@ -20,9 +20,9 @@ exports.create = function(req, res){
 
 	function afterSaving(err, user) {
 		if(err) {console.log(err); res.send(500); }
-			var userID = user[0]['_id'];
+			var userID = user['_id'];
 			req.session.userID = userID;
-			url = /homepage/ + userID;
+			url = /homepage.handlebars/ + userID;
 			res.redirect(url);
 	}
 }

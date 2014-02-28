@@ -65,3 +65,17 @@ models.Post
   function done(err) {
     if(err) console.log(err);
   }
+models.User
+  .find()
+  .remove()
+  .exec(done)
+  function done(err) {
+    if(err) console.log(err);
+  }
+  models.Follow
+  .find()
+  .remove()
+  .exec(done)
+  function done(err) {
+    if(err) console.log(err);
+  }
