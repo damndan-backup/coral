@@ -1,6 +1,18 @@
+var models = require("../models");
+var mongoose = require("mongoose");
+var ObjectId = mongoose.Types.ObjectId;
 exports.view = function(req, res){
-	res.render('account',{
-	});
+	models.User
+	.find({"_id": new ObjectId(req.session.userID)})
+	.exec(goToAccount);
+	function goToAccount(err, user) {
+		if(err) {console.log(err); res.send(500); }
+		res.render('account',{
+		"name": user[0]['name'],
+		"userID":req.session.userID
+		});
+	}
+	
 };
 
 exports.follow = function(req, res){

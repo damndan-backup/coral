@@ -14,7 +14,8 @@ exports.addWeb = function(req, res){
 	var newWeb = new models.Web({
 		"title": req.query.title,
 		"date": date.getTime(),
-		"creator": "me"
+		"creator": "me",
+		"userID": req.session.userID
 	});
 	newWeb.save(afterSaving);
 	

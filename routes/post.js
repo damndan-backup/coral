@@ -17,7 +17,8 @@ exports.view = function(req, res){
 		res.render('post',{
 			"webID": webID,
 			"postID": postID,
-			"message": post[0]['message']
+			"message": post[0]['message'],
+			"userID": req.session.userID
 		});
 	}
 };
