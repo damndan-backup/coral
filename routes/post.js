@@ -38,7 +38,7 @@ exports.addPost = function(req, res){
 		
 
 	} else {
-		if(message == null) message = "Create New Post!";
+		if(message == null) message = "Click to create new Post!";
 		var newPost = new models.Post({
 			"message": message,
 			"date": date.getTime(),

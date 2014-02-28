@@ -16,7 +16,7 @@
 
 <div id="header-image" class="bar bar-header">
       <a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
-      <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
+      <h1 id="nexa-light-header" style="color: #00ADE6" class="title">Web</h1>
 </div>
 
 
@@ -51,7 +51,6 @@
       {{#each node}}
         {id: '{{id}}', label: '{{message}}'},
       {{/each}}
-      {id: 0, label: ''}
     ];
 
 
@@ -79,14 +78,17 @@
       }
     }
   };
+
   var graph = new vis.Graph(container, data, options);
 
   graph.on('select', function (properties) {
-   
-    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
-    //lert('selected nodes: ' + properties.nodes);
-    
 
+  if (confirm('Post to this node?')) {
+    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
+} else {
+
+}
+   
   });
 </script>
 
