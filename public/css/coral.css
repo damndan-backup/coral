@@ -51,7 +51,7 @@
 	background-image: url('https://dl.dropboxusercontent.com/u/39378312/header_background.png');
 	background-size: cover;
 	z-index: 15;
-	opacity: 0.8;
+	opacity: 0.9;
 	width: 100%;
 	height: 50px;
 	margin: auto;
@@ -177,7 +177,7 @@ a.section-text {
 
 .line-separator {
 	height: 1px;
-	background: white;
+	background: black;
 	border-bottom: 1px solid #5e5e5e;
 }
 
@@ -216,3 +216,8 @@ a.section-text {
 	border-bottom: solid #E9E9E9 1px;
 }
 
+.appended-post {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+}
