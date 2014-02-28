@@ -69,6 +69,7 @@ app.get('/changeUsername.handlebars', changeUsername.view);
 app.get('/changeEmail.handlebars', changeEmail.view);
 app.get('/changePassword.handlebars', changePassword.view);
 app.get('/web.handlebars/:webID', web.view);
+app.get('/webalt.handlebars/:webID', web.altview);
 app.get('/post.handlebars/:webID/:parentID', post.view); //for the view of an individual post
 
 //action routes
