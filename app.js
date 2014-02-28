@@ -68,6 +68,7 @@ app.get('/changeEmail.handlebars', changeEmail.view);
 app.get('/changePassword.handlebars', changePassword.view);
 app.get('/web.handlebars/:webID', web.view);
 app.get('/post.handlebars/:webID/:postID', post.view); //for the view of an individual post
+app.get('/webalt.handlebars/:webID', web.altview);
 
 //action routes
 app.get('/addWeb', newWeb.addWeb);
