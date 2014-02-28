@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 var models = require("../models");
 var mongoose = require("mongoose");
 var ObjectId = mongoose.Types.ObjectId;
 
 exports.view = function(req, res){
-	res.render('login',{
-			
+	res.render('login', {	
 		});
-
+}
 exports.loginFunction = function(req, res){
 	var name = req.query.name;
 	var password = req.query.password;

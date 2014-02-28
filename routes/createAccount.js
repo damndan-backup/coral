@@ -6,16 +6,14 @@ exports.view = function(req, res){
 	res.render('createAccount',{
 			
 		});
-
+}
 exports.create = function(req, res){
 	var name = req.query.name;
 	var password = req.query.password;
 
 	var newUser = new models.User({
 			"name": name,
-			"password": password,
-			"followers": [],
-  			"following": []
+			"password": password
 		});
 
 			newUser.save(afterSaving);

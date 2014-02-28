@@ -17,12 +17,14 @@ var PostSchema = new Mongoose.Schema({
 
 var UserSchema = new Mongoose.Schema({
 	"name": String,
-	"password": String,
-	"followers": [ { type: String} ],
-	"following": [ { type: String} ]
+	"password": String
 });
+var FollowSchema = new Mongoose.Schema({
+  "follower": String,
+  "followee": String
+})
 
 exports.Web = Mongoose.model('Web', WebSchema);
 exports.Post = Mongoose.model('Post', PostSchema);
 exports.User = Mongoose.model('User', UserSchema);
-
+exports.Follow = Mongoose.model('Follow', FollowSchema);
