@@ -64,12 +64,24 @@
 		  
 
 			{{#each webs}}
-		 		<a id="{{id}}" href="../web.handlebars/{{id}}">
+
+			<div id="{{id}}">
+		 	<a href="../web.handlebars/{{id}}">
 		 		<div class="web-section">
 		 			<span class="section-text">{{title}}</span>
 		 		</div>
+		 	</a>
+
+		 		<!-- old version 
+			 	<a class="item" id="{{id}}" href="web.handlebars/{{id}}">
+		 			{{title}}
 		 		</a>
+		 			-->
+		 	</div>
+
 			{{/each}}
+
+			<!--dummy blank section for spacing-->
 				<div class="web-section" style="opacity:0">
 		 			<span class="section-text">{{title}}</span>
 		 		</div>

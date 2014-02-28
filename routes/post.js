@@ -42,7 +42,7 @@ exports.addPost = function(req, res){
 			function afterUpdate(err, post) {
 				if(err) {console.log(err); res.send(500); }
 				console.log("updated post is " + post);
-				res.send();
+				//res.send();
 			}
 			parentID = 0;
 		} 

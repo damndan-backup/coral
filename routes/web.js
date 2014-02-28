@@ -7,6 +7,7 @@ exports.view = function(req, res){
 	.exec(afterQuery);
 	function afterQuery(err, nodes) {
 		if(err) {console.log(err); res.send(500); }
+		console.log("length is " + nodes.length);
 		res.render('web',{
 		"web": web,
 		"node": nodes,
@@ -27,7 +28,8 @@ exports.altview = function(req, res){
 		if(err) {console.log(err); res.send(500); }
 		res.render('webalt',{
 		"web": web,
-		"node": nodes
+		"node": nodes,
+		"userID": req.session.userID
 	});
 	}
 	
