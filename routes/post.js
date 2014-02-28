@@ -37,7 +37,6 @@ exports.addPost = function(req, res){
 			models.Post
 			.find({"web": webID, "parent": "-1"})
 			.remove()
-			//.update({ "message": message, "parent": "0" })
 			.exec(afterUpdate);
 			function afterUpdate(err, post) {
 				if(err) {console.log(err); res.send(500); }

@@ -58,7 +58,7 @@ if ('development' == app.get('env')) {
 
 //regular page routes
 app.get('/', index.view);
-app.get('/homepage.handlebars', homepage.view);
+app.get('/homepage.handlebars/:userID', homepage.view);
 app.get('/newWeb.handlebars', newWeb.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
