@@ -1,5 +1,13 @@
 exports.view = function(req, res){
-	res.render('activity',{
-		'userID': req.session.userID
-	});
-};
+	models.Post
+	.find( {} )
+	.sort('-date')
+	.exec(goToActivity);
+
+	function goToActivity(err, posts) {
+		res.render('activity',{
+			'posts': posts,
+			'userID': req.session.userID
+		});
+	}
+}
