@@ -36,17 +36,17 @@
         </div> 
     </div>
 
+
+
 	<content>
 		<div>
 
 		<br><br><br>
 
-
 		<div class="section-name">
 		    <div class="section-text">Create New Web</div>
 		</div>
 		
-
 		 	 <a class="section-text" href="newWeb.handlebars">+ Make New</a>
 
 
@@ -59,10 +59,11 @@
 		  
 
 			{{#each webs}}
+			<div style="background-color: black" class="section-web">
 		 		<a class="section-text" id="{{id}}" href="web.handlebars/{{id}}">
 		 			{{title}}
 		 		</a>
-		 		<br>
+		 	</div>	
 			{{/each}}
 
 		</div>
