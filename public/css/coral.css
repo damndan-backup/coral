@@ -146,6 +146,8 @@ img.cover-photo {
 
 	.section-name {
 		background: rgba(230, 230, 230, 0.7);
+		height: 35px;
+		line-height: 35px;
 	}
 
 	.section-text {
@@ -154,6 +156,11 @@ img.cover-photo {
 
 	a.section-text {
 		margin-left: 20px;
+	}
+
+	.section-web {
+		background: rgba(280, 280, 280);
+		height: 50px;
 	}
 
 	.line-separator {
