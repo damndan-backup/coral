@@ -4,6 +4,9 @@
   <title>Graph | Basic usage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  
   <!-- Loading Bootstrap -->
   <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
 
@@ -19,8 +22,6 @@
 </head>
 
 <body>
-
-  
 
 <!-- Header -->
   <div id="header-image" class="header-gen">
@@ -76,14 +77,17 @@
       }
     }
   };
+
   var graph = new vis.Graph(container, data, options);
 
   graph.on('select', function (properties) {
-   
-    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
-    //lert('selected nodes: ' + properties.nodes);
-    
 
+  if (confirm('Post to this node?')) {
+    window.location.href = "/post.handlebars/" + "{{web}}" + "/" + properties.nodes[0];
+} else {
+
+}
+   
   });
 </script>
 

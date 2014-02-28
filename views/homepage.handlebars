@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
     <!-- Loading Bootstrap -->
     <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
 
@@ -22,7 +24,7 @@
 <body>
 
 <!-- Header -->
-	<div id="header-image" class="header-gen">
+	<div class="header-gen">
   		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">coral</h1>
 	</div>
 
@@ -35,19 +37,22 @@
             <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
         </div> 
     </div>
-
+<br><br>
 
 
 	<content>
 		<div>
 
-		<br><br><br>
-
 		<div class="section-name">
 		    <div class="section-text">Create New Web</div>
 		</div>
 		
-		 	 <a class="section-text" href="newWeb.handlebars">+ Make New</a>
+
+		 	 <a href="newWeb.handlebars">
+		 	 	<div class="web-section">
+		 	 		<span class="section-text">+ Make New</span>
+		 	 	</div>
+		 	 </a>
 
 
 			
@@ -59,11 +64,12 @@
 		  
 
 			{{#each webs}}
-			<div style="background-color: black" class="section-web">
-		 		<a class="section-text" id="{{id}}" href="web.handlebars/{{id}}">
-		 			{{title}}
+		 		<a id="{{id}}" href="web.handlebars/{{id}}">
+		 		<div class="web-section">
+		 			<span class="section-text">{{title}}</span>
+		 		</div>
 		 		</a>
-		 	</div>	
+		 	
 			{{/each}}
 
 		</div>
