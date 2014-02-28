@@ -1,3 +1,5 @@
+var models = require("../models");
+
 exports.view = function(req, res){
 	models.Post
 	.find( {} )
