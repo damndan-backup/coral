@@ -11,7 +11,7 @@
 
 #nexa-light-header {
 	font-family: 'nexa_light';
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -59,7 +59,10 @@
 	top: 0px;
 }
 
-
+.title {
+	margin-top: 0px;
+	line-height: 50px
+}
 
 #compose-icon {
 	color: #cc685d;
