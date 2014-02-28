@@ -49,7 +49,7 @@ exports.addPost = function(req, res){
 		var newPost = new models.Post({
 			"message": message,
 			"date": date.getTime(),
-			"creator": "me",
+			"creator": req.session.userID,
   			"parent": parentID,
   			"web": webID
 		});
