@@ -61,7 +61,6 @@ exports.addPost = function(req, res){
 				var url = "web.handlebars/" + webID;
 				res.redirect(url);
 			}
-			res.send();
 	}
 
 }
