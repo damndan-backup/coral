@@ -25,4 +25,4 @@ var UserSchema = new Mongoose.Schema({
 exports.Web = Mongoose.model('Web', WebSchema);
 exports.Post = Mongoose.model('Post', PostSchema);
 exports.User = Mongoose.model('User', UserSchema);
-exports.Friend = Mongoose.model('Friend', FriendSchema);
+//exports.Friend = Mongoose.model('Friend', FriendSchema);
