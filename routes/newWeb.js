@@ -14,7 +14,8 @@ exports.addWeb = function(req, res){
 	var newWeb = new models.Web({
 		"title": req.query.title,
 		"date": date.getTime(),
-		"creator": "me"
+		"creator": req.session.userID,
+		"userID": req.session.userID
 	});
 	newWeb.save(afterSaving);
 	
@@ -29,7 +30,7 @@ exports.addWeb = function(req, res){
 			var newPost = new models.Post({
 				"message": "Create New Post!",
 				"date": date.getTime(),
-				"creator": "me",
+				"creator": req.session.userID,
   				"parent": "-1",
   				"web": web[0]['id']
 			});

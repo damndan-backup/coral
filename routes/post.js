@@ -17,7 +17,8 @@ exports.view = function(req, res){
 		res.render('post',{
 			"webID": webID,
 			"postID": postID,
-			"message": post[0]['message']
+			"message": post[0]['message'],
+			"userID": req.session.userID
 		});
 	}
 };
@@ -37,19 +38,18 @@ exports.addPost = function(req, res){
 			models.Post
 			.find({"web": webID, "parent": "-1"})
 			.remove()
-			//.update({ "message": message, "parent": "0" })
 			.exec(afterUpdate);
 			function afterUpdate(err, post) {
 				if(err) {console.log(err); res.send(500); }
 				console.log("updated post is " + post);
-				res.send();
+				//res.send();
 			}
 			parentID = 0;
 		} 
 		var newPost = new models.Post({
 			"message": message,
 			"date": date.getTime(),
-			"creator": "me",
+			"creator": req.session.userID,
   			"parent": parentID,
   			"web": webID
 		});
@@ -61,7 +61,6 @@ exports.addPost = function(req, res){
 				var url = "web.handlebars/" + webID;
 				res.redirect(url);
 			}
-			res.send();
 	}
 
 }

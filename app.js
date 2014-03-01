@@ -58,7 +58,7 @@ if ('development' == app.get('env')) {
 
 //regular page routes
 app.get('/', index.view);
-app.get('/homepage.handlebars', homepage.view);
+app.get('/homepage.handlebars/:userID', homepage.view);
 app.get('/newWeb.handlebars', newWeb.view);
 app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
@@ -73,9 +73,9 @@ app.get('/createAccount.handlebars', createAccount.view);
 //action routes
 app.get('/addWeb', newWeb.addWeb);
 app.get('/addPost/:webID/:parentID', post.addPost);
-//app.get('/loginFunction', login.loginFunction);
-//app.get('/create', createAccount.create);
-
+app.get('/loginFunction', login.loginFunction);
+app.get('/create', createAccount.create);
+app.get('/logOut', account.logOut);
 
 // Example route
 // app.get('/users', user.list);

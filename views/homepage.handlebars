@@ -32,12 +32,12 @@
 	<div class="bottom-holder">
         <div class="btn-toolbar">
            <!-- <div class="btn-group"> -->
-            <a class="navbutton btn btn-inverse" href="homepage.handlebars"><span class="fui-play"></span></a>
-            <a class="navbutton btn btn-inverse" href="account.handlebars"><span class="fui-user"></span></a>
-            <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
+            <a class="navbutton btn btn-inverse" href="#"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="../account.handlebars"><span class="fui-user"></span></a>
+            <a class="navbutton btn btn-inverse" href="../activity.handlebars"><span class="fui-eye"></span></a>
         </div> 
     </div>
-<br><br><br>
+<br><br>
 
 
 	<content>
@@ -48,7 +48,7 @@
 		</div>
 		
 
-		 	 <a href="newWeb.handlebars">
+		 	 <a href="../../newWeb.handlebars">
 		 	 	<div class="web-section">
 		 	 		<span class="section-text">+ Make New</span>
 		 	 	</div>
@@ -64,13 +64,28 @@
 		  
 
 			{{#each webs}}
-		 		<a id="{{id}}" href="web.handlebars/{{id}}">
+
+			<div id="{{id}}">
+		 	<a href="../web.handlebars/{{id}}">
 		 		<div class="web-section">
 		 			<span class="section-text">{{title}}</span>
 		 		</div>
+		 	</a>
+
+		 		<!-- old version 
+			 	<a class="item" id="{{id}}" href="web.handlebars/{{id}}">
+		 			{{title}}
 		 		</a>
-		 	
+		 			-->
+		 	</div>
+
 			{{/each}}
+
+			<!--dummy blank section for spacing-->
+				<div class="web-section" style="opacity:0">
+		 			<span class="section-text">{{title}}</span>
+		 		</div>
+
 
 		</div>
 	</content>

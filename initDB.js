@@ -19,7 +19,7 @@ var models   = require('./models');
 var local_database_name = 'coral';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
-mongoose.connect(database_uri);
+//mongoose.connect(database_uri);
 
 
 // Do the initialization here
@@ -40,7 +40,7 @@ function onceClear(err) {
   // loop over the projects, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
   var to_save_count = projects_json.length;
-  for(var i=0; i<projects_json.length; i++) {
+  /*for(var i=0; i<projects_json.length; i++) {
     var json = projects_json[i];
     var proj = new models.Web(json);
 
@@ -53,12 +53,27 @@ function onceClear(err) {
         console.log('DONE');
         // The script won't terminate until the 
         // connection to the database is closed
-        mongoose.connection.close()
+        
       }
     });
-  }
+  }*/
+  mongoose.connection.close()
 }
 models.Post
+  .find()
+  .remove()
+  .exec(done)
+  function done(err) {
+    if(err) console.log(err);
+  }
+models.User
+  .find()
+  .remove()
+  .exec(done)
+  function done(err) {
+    if(err) console.log(err);
+  }
+  models.Follow
   .find()
   .remove()
   .exec(done)

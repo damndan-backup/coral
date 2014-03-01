@@ -6,51 +6,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/css/ionic.css" rel="stylesheet">
-	<link href="/css/ionic.min.css" rel="stylesheet">
-	<link href="/css/coral.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<!-- Loading Bootstrap -->
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="/css/flat/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/images/flat/favicon.ico">
+
+   <link href="/css/coral.css" rel="stylesheet">
      
 </head>
 
 <body>
 
-
-	<div id="header-image" class="bar bar-header">
-  		<a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
+	<!-- Header -->
+	<div class="header-gen">
+		<!--<a href="homepage.handlebars"><button></button></a>-->
+		<h1 id="nexa-light-header" style="color: #00ADE6" class="title">create new post</h1>
+		<!--<a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>-->
 	</div>
-	<br><br>
-<!doctype html>
 
-<html>
-<head>
-	<title>New Post Page</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link href="/css/ionic.css" rel="stylesheet">
-	<link href="/css/ionic.min.css" rel="stylesheet">
-	<link href="/css/coral.css" rel="stylesheet">
-     
-</head>
-
-<body>
-
-
-	<div id="header-image" class="bar bar-header">
-  		<a href="javascript:history.back()"><button class="button button-clear button-positive icon ion-ios7-arrow-left"></button></a>
-  		<h1 id="nexa-light-header" style="color: #00ADE6" class="title"></h1>
-	</div>
+<!-- Bottom Nav Bar -->	
+	<div class="bottom-holder">
+        <div class="btn-toolbar">
+            <a class="navbutton btn btn-inverse" href="../../homepage.handlebars/{{userID}}"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="../../account.handlebars"><span class="fui-user"></span></a>
+            <a class="navbutton btn btn-inverse" href="../../activity.handlebars"><span class="fui-eye"></span></a>
+        </div> 
+    </div>
 	
-	<div class="list card">
+	<br><br>
 
-<form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{postID}}">
-	<label class="item item-input">
-    	<textarea placeholder="What's new?" name="message"></textarea>
-  	</label>
 
-		<button type="submit" class="button button-block button-pinkCoral">Submit Post</button>
-</form>
 
+<div class="new-web-form">
+	<form id="addPostForm" role="form" method="get" action="/addPost/{{webID}}/{{postID}}">
+	
+    	<textarea type="text" placeholder="What related facts do you have today?" name="message" class="form-control"></textarea>
+
+		<button type="submit" class="submit-button btn btn-embossed btn-inverse">Submit Post</button>
+	</form>
+</div>
+
+<div class="center">
+    <a href="javascript:history.back()"><button class="cancel-button btn btn-embossed btn-info">Cancel</button></a>
+  </div>
+
+<br> 
+
+ <div class="section-name">
+        <div class="section-text">Appending post to:</div>
+  </div>
+
+  <div class="appended-post">
+    <p>
+      {{message}}
+    </p>
+  </div>
+
+<!--
   <div class="item item-avatar">
     <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
     <h2>Justin Wiguna</h2>
@@ -83,33 +100,23 @@
   </div>
 
 </div>
+-->
 
-
-	<div style="color: white" id="tab-color" class="tabs tabs-icon-top">
-	 	<a href="homepage.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-home"></i>
-      Home
-	  </a>
-	 	<a href="discover.handlebars" class="tab-item">
-	  	<i id="other-icons" class="icon ion-ios7-search"></i>
-      Discover
-	  </a>
-		<a href="account.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-person"></i>
-      Account
-	  </a>
-		<a href="activity.handlebars" class="tab-item">
-	    <i id="other-icons" class="icon ion-ios7-bolt"></i>
-      Activity
-	  </a>
-		</div>
 	
-  <script src="https://code.jquery.com/jquery.js"></script>
+  	<script src="https://code.jquery.com/jquery.js"></script>
 
-	<script src="/js/ionic-angular.js"></script>
-	<script src="/js/ionic-angular.min.js"></script>
-	<script src="/js/ionic.js"></script>
-	<script src="/js/ionic.min.js"></script>
+	 <!-- Load JS here for greater good =============================-->
+    <script src="/js/flat/jquery-1.8.3.min.js"></script>
+    <script src="/js/flat/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/flat/jquery.ui.touch-punch.min.js"></script>
+    <script src="/js/flat/bootstrap.min.js"></script>
+    <script src="/js/flat/bootstrap-select.js"></script>
+    <script src="/js/flat/bootstrap-switch.js"></script>
+    <script src="/js/flat/flatui-checkbox.js"></script>
+    <script src="/js/flat/flatui-radio.js"></script>
+    <script src="/js/flat/jquery.tagsinput.js"></script>
+    <script src="/js/flat/jquery.placeholder.js"></script>
+
 </body>
 </html>
 	

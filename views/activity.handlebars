@@ -30,7 +30,7 @@
   <div class="bottom-holder">
         <div class="btn-toolbar">
            <!-- <div class="btn-group"> -->
-            <a class="navbutton btn btn-inverse" href="homepage.handlebars"><span class="fui-play"></span></a>
+            <a class="navbutton btn btn-inverse" href="homepage.handlebars/{{userID}}"><span class="fui-play"></span></a>
             <a class="navbutton btn btn-inverse" href="account.handlebars"><span class="fui-user"></span></a>
             <a class="navbutton btn btn-inverse" href="activity.handlebars"><span class="fui-eye"></span></a>
         </div> 
@@ -38,46 +38,14 @@
 
 	<br><br>
 
-<div class="list">
+{{#each posts}}
 
-	<a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>Himalayan salt lamps release ions to help cleanse the air around you. You should buy one. #lights #clean</p>
-    </a>
+       
+    <div class="web-section">
+      <span class="section-text">{{message}}</span>
+    </div>
 
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>When creating a new design, it's extremely helpful to reference other existing designs that you like and combining them. #design #hci</p>
-    </a>
-
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>The best boba you can get is from Fantasia in Cupertino. They use real tea! #boba #tea #cupertino</p>
-    </a>
-
-	<a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>Himalayan salt lamps release ions to help cleanse the air around you. You should buy one. #lights #clean</p>
-    </a>
-
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>When creating a new design, it's extremely helpful to reference other existing designs that you like and combining them. #design #hci</p>
-    </a>
-
-    <a class="coral-card item item-avatar" href="#">
-      <img src="https://dl.dropboxusercontent.com/u/39378312/headshot.jpg">
-      <h3>Justin Wiguna</h3>
-      <p>The best boba you can get is from Fantasia in Cupertino. They use real tea! #boba #tea #cupertino</p>
-    </a>
-
-</div>
-
+{{/each}}
 
 
 

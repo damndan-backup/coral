@@ -8,7 +8,8 @@ exports.view = function(req, res){
 
 	function goToHomepage(err, webs) {
 		res.render('homepage',{
-			'webs': webs
+			'webs': webs,
+			'userID': req.session.userID
 		});
 	}
 };
