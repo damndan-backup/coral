@@ -41,8 +41,6 @@ exports.addPost = function(req, res){
 			.exec(afterUpdate);
 			function afterUpdate(err, post) {
 				if(err) {console.log(err); res.send(500); }
-				console.log("updated post is " + post);
-				//res.send();
 			}
 			parentID = 0;
 		} 
@@ -53,14 +51,13 @@ exports.addPost = function(req, res){
   			"parent": parentID,
   			"web": webID
 		});
-
-			newPost.save(afterSaving);
-			function afterSaving(err, post) {
+			newPost.save(function afterSaving(err, post) {
 				if(err) {console.log(err); res.send(500); }
 				console.log("new post is " + post);
 				var url = "web.handlebars/" + webID;
 				res.redirect(url);
-			}
+			});
+			
 	}
 
 }
