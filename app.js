@@ -70,12 +70,14 @@ app.get('/login.handlebars', login.view);
 app.get('/createAccount.handlebars', createAccount.view);
 
 
+
 //action routes
 app.get('/addWeb', newWeb.addWeb);
 app.get('/addPost/:webID/:parentID', post.addPost);
 app.get('/loginFunction', login.loginFunction);
 app.get('/create', createAccount.create);
 app.get('/logOut', account.logOut);
+app.get('/index2', index.view2);
 
 // Example route
 // app.get('/users', user.list);
