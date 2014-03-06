@@ -16,13 +16,13 @@ exports.create = function(req, res){
 			"password": password
 		});
 
-			newUser.save(afterSaving);
-
-	function afterSaving(err, user) {
-		if(err) {console.log(err); res.send(500); }
+		newUser.save(function afterSaving(err, user) {
+			if(err) {console.log(err); res.send(500); }
 			var userID = user['_id'];
 			req.session.userID = userID;
 			url = /homepage.handlebars/ + userID;
 			res.redirect(url);
-	}
+	});
+
+	
 }

@@ -1,10 +1,6 @@
 var models = require("../models");
 
 exports.view = function(req, res){
-	// if(!req.session.uname) {
-	// 	var uname = getUname();
-	// 	req.session.uname = uname;
-	// }
 	res.render('newWeb',{
 	});
 };
@@ -17,11 +13,25 @@ exports.addWeb = function(req, res){
 		"creator": req.session.userID,
 		"userID": req.session.userID
 	});
-	newWeb.save(afterSaving);
+	newWeb.save(function afterNewWeb(err, web) {
+			if(err) {console.log(err); res.send(500); }
+			var newPost = new models.Post({
+				"message": "Create New Post!",
+				"date": date.getTime(),
+				"creator": req.session.userID,
+  				"parent": "-1",
+  				"web": web['_id']
+			});
+			newPost.save(function save(err, post){
+				if(err) {console.log(err); res.send(500); }
+			});
+			var url = "/web.handlebars/" + web['_id'];
+			res.redirect(url);
+		});
 	
+	}
 	
-		
-		models.Web
+		/*models.Web
 		.find( {} )
 		.sort('-date')
 		.exec(goToWeb);
@@ -37,8 +47,6 @@ exports.addWeb = function(req, res){
 			newPost.save(afterSaving);
 			var url = "/web.handlebars/" + web[0]['id'];
 			res.redirect(url);
-		}
-		function afterSaving(err, web) {
-			if(err) {console.log(err); res.send(500); }
-		}
-};
+		}*/
+		
+		
