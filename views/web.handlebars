@@ -127,7 +127,7 @@
           
           cy.elements().addClass('faded');
           neighborhood.removeClass('faded');
-          window.open('/post.handlebars/' + '{{web}}' + '/' + node.id());
+          window.location('/post.handlebars/' + '{{web}}' + '/' + node.id());
         });
 
         cy.on('tap', function(e){
