@@ -44,17 +44,25 @@
 	<content>
 		<div>
 
+
 		<div class="section-name">
 		    <div class="section-text">Create New Web</div>
 		</div>
 		
-
-		 	 <a href="../../newWeb.handlebars">
+		{{#if makeNewColor}}
+ 			<a href="../../newWeb.handlebars" class="makeNewBtn">
+		 	 	<div class="web-section" style="background-color:#00ADE6; color: black">
+		 	 		<span class="section-text">+ Make New</span>
+		 	 	</div>
+		 	 </a>
+		{{else}}
+		 	 <a href="../../newWeb.handlebars" class="makeNewBtn">
 		 	 	<div class="web-section">
 		 	 		<span class="section-text">+ Make New</span>
 		 	 	</div>
 		 	 </a>
-
+	 	{{/if}} 
+	 
 
 			
 
@@ -111,7 +119,7 @@
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-48711052-1', { 'cookieDomain': 'none' });
+	  ga('create', 'UA-48711052-1', 'corals.herokuapp.com');
 	  ga('send', 'pageview');
 
 	</script>

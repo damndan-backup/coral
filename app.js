@@ -78,6 +78,7 @@ app.get('/loginFunction', login.loginFunction);
 app.get('/create', createAccount.create);
 app.get('/logOut', account.logOut);
 app.get('/index2', index.view2);
+app.get('/homepage2/:userID', homepage.view2);
 
 // Example route
 // app.get('/users', user.list);
