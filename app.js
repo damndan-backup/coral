@@ -60,12 +60,11 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/homepage.handlebars/:userID', homepage.view);
 app.get('/newWeb.handlebars', newWeb.view);
-app.get('/activity.handlebars', activity.view);
+//app.get('/activity.handlebars', activity.view);
 app.get('/account.handlebars', account.view);
-app.get('/accountSettings.handlebars', accountSettings.view);
+//app.get('/accountSettings.handlebars', accountSettings.view);
 app.get('/web.handlebars/:webID', web.view);
 app.get('/post.handlebars/:webID/:postID', post.view); //for the view of an individual post
-app.get('/webalt.handlebars/:webID', web.altview);
 app.get('/login.handlebars', login.view);
 app.get('/createAccount.handlebars', createAccount.view);
 
@@ -77,8 +76,8 @@ app.get('/addPost/:webID/:parentID', post.addPost);
 app.get('/loginFunction', login.loginFunction);
 app.get('/create', createAccount.create);
 app.get('/logOut', account.logOut);
-app.get('/index2', index.view2);
-app.get('/homepage2/:userID', homepage.view2);
+//app.get('/index2', index.view2);
+//app.get('/homepage2/:userID', homepage.view2);
 
 // Example route
 // app.get('/users', user.list);

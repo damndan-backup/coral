@@ -21,3 +21,19 @@ function clickMakeNew(e){
 	e.preventDefault();
 	ga('send', 'event', 'makeNew', 'click');
 } 
+
+var overlayElement = document.createElement("div");
+overlayElement.className = 'modalOverlay';
+document.body.appendChild(overlayElement);
+
+var modalWindowElement = document.createElement("div");
+modalWindowElement.className = 'modalWindow';
+modalWindowElement.innerHTML = msg;
+modalWindowElement.style.left = (window.innerWidth - 200) / 2 + "px";
+document.body.appendChild(modalWindowElement);
+
+setTimeout(function() {
+  modalWindowElement.style.opacity = 1;
+  overlayElement.style.opacity = 0.4;
+  overlayElement.addEventListener("click", hidePopUpMessage, false);
+}, 300);
