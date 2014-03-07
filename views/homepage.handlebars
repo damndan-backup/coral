@@ -41,7 +41,7 @@
   <div class="bottom-holder">
         <div class="btn-toolbar">
            <!-- <div class="btn-group"> -->
-            <a class="navbutton btn btn-inverse" href="../../homepage.handlebars/{{userID}}"><span class="ion-home"><br>Home</span></a>
+            <a class="navbutton btn btn-inverse" href="#"><span class="ion-home"><br>Home</span></a>
             <a class="navbutton btn btn-inverse" href="../account.handlebars"><span class="ion-person"><br>Account</span></a>
         </div> 
     </div>
@@ -124,7 +124,7 @@
 		function initApp() {
 		  setTimeout(function() { window.scrollTo(0, 1); }, 10);
 		  document.getElementById("popUpBtn").addEventListener("click", function() {
-		    showPopUpMessage("<p>Coral Help</p>Click 'Make New' to create a new web of ideas<br><br>or<br><br>Click an existing web to view existing content and add new ideas<br><br>Enjoy!");
+		    showPopUpMessage("<p>Coral Help</p>Click 'Make New' to create a new web of ideas<br><br>or<br><br>Click an existing web to view existing content and add new ideas<br><br>Enjoy!<br><br>(tap anywhere to exit)");
 		  }, false);
 		}
 		//show the modal overlay and popup window

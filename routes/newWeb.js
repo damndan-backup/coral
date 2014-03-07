@@ -2,6 +2,7 @@ var models = require("../models");
 
 exports.view = function(req, res){
 	res.render('newWeb',{
+		'userID': req.session.userID
 	});
 };
 

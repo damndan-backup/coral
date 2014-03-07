@@ -13,7 +13,7 @@ var homepage = require('./routes/homepage');
 var newWeb = require('./routes/newWeb');
 var activity = require('./routes/activity');
 var account = require('./routes/account');
-var accountSettings = require('./routes/accountSettings');
+//var accountSettings = require('./routes/accountSettings');
 var web = require('./routes/web');
 var post = require('./routes/post'); //for when user clicks into post
 

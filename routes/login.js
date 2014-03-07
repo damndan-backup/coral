@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var ObjectId = mongoose.Types.ObjectId;
 
 exports.view = function(req, res){
-	res.render('login', {	
+	res.render('login', {
 	});
 }
 
