@@ -49,9 +49,9 @@
    
     <div class="header-gen">
         <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
-        <div class="section-name">
-        <div class="section-text">Click on any post to attach new post</div>
-        </div>
+        <section id="wrapper" style="margin-top: -55px; margin-left: 90%; color: #00ADE6">
+        <article id="popUpBtn" class="ion-help-circled"></article>
+        </section>
     </div>
   
 
@@ -218,6 +218,56 @@
     <script src="/js/flat/jquery.tagsinput.js"></script>
     <script src="/js/flat/jquery.placeholder.js"></script>
 
+
+    <script type="text/javascript">
+    var overlayElement = null;
+    var modalWindowElement = null;
+    window.addEventListener('load', initApp, false);
+
+    function initApp() {
+      setTimeout(function() { window.scrollTo(0, 1); }, 10);
+      document.getElementById("popUpBtn").addEventListener("click", function() {
+        showPopUpMessage("<p>Coral Help</p>Click on any post to attach another post to it<br><br>(tap anywhere to exit)");
+      }, false);
+    }
+    //show the modal overlay and popup window
+    function showPopUpMessage(msg) {
+      overlayElement = document.createElement("div");
+      overlayElement.className = 'modalOverlay';
+      modalWindowElement = document.createElement("div");
+      modalWindowElement.className = 'modalWindow';
+      modalWindowElement.innerHTML = msg;
+      modalWindowElement.style.left = (window.innerWidth - 250) / 2 + "px";
+      document.body.appendChild(overlayElement);
+      document.body.appendChild(modalWindowElement);
+      setTimeout(function() {
+        modalWindowElement.style.opacity = 1;
+        overlayElement.style.opacity = 0.4;
+        overlayElement.addEventListener("click", hidePopUpMessage, false);
+      }, 300);
+    }
+    //hide the modal overlay and popup window
+    function hidePopUpMessage() {
+      modalWindowElement.style.opacity = 0;
+      overlayElement.style.opacity = 0;
+      overlayElement.removeEventListener("click", hidePopUpMessage, false);
+      setTimeout(function() {
+        document.body.removeChild(overlayElement);
+        document.body.removeChild(modalWindowElement);
+      }, 400);
+    }
+  </script>
+  
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48711052-1', 'corals.herokuapp.com');
+    ga('send', 'pageview');
+
+  </script>
 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
