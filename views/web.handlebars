@@ -78,7 +78,7 @@
 
       $('#cy').cytoscape({
         layout: {
-          name: 'circle',
+          name: 'breadthfirst',
         },
 
         style: cytoscape.stylesheet()
@@ -94,8 +94,8 @@
         .selector('edge')
           .css({
             'width': '2',
-            'target-arrow-shape': 'triangle',
-            'source-arrow-shape': 'tee',
+            'target-arrow-shape': 'tee',
+            'source-arrow-shape': 'triangle',
             'source-arrow-color': '#00ade6',
             'line-color': '#00ade6',
             'target-arrow-color': '#00ade6'
