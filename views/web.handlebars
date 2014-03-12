@@ -39,6 +39,7 @@
 <meta charset=utf-8 />
 
   <script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
+  <script src="arbor.js"></script>
   
 </head>
 
@@ -78,7 +79,7 @@
 
       $('#cy').cytoscape({
         layout: {
-          name: 'breadthfirst',
+          name: 'arbor',
         },
 
         style: cytoscape.stylesheet()
