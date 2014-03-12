@@ -40,7 +40,6 @@
 
   <script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
   <script src="arbor.js"></script>
-  
 </head>
 
 
@@ -79,7 +78,7 @@
 
       $('#cy').cytoscape({
         layout: {
-          name: 'arbor',
+          name: 'cose',
         },
 
         style: cytoscape.stylesheet()
@@ -88,18 +87,19 @@
             'content': 'data(name)',
             'text-valign': 'center',
             'color': '#00ade6',
-            'text-outline-width': 2,
+            'text-outline-width': 1,
             'text-outline-color': 'black',
-            'background-color': 'black'
+            'background-color': 'black',
+            'font-size': 10
           })
         .selector('edge')
           .css({
             'width': '2',
             'target-arrow-shape': 'tee',
             'source-arrow-shape': 'triangle',
-            'source-arrow-color': '#00ade6',
-            'line-color': '#00ade6',
-            'target-arrow-color': '#00ade6'
+            'source-arrow-color': '#cc685d',
+            'line-color': '#cc685d',
+            'target-arrow-color': '#cc685d'
           })
         .selector(':selected')
           .css({
