@@ -77,25 +77,32 @@
     $(function(){ // on dom ready
 
       $('#cy').cytoscape({
+        layout: {
+          name: 'circle',
+        },
 
         style: cytoscape.stylesheet()
         .selector('node')
           .css({
             'content': 'data(name)',
             'text-valign': 'center',
-            'color': 'white',
+            'color': '#00ade6',
             'text-outline-width': 2,
-            'text-outline-color': '#888'
+            'text-outline-color': 'black',
+            'background-color': 'black'
           })
         .selector('edge')
           .css({
-            'target-arrow-shape': 'triangle'
+            'width': '2',
+            'target-arrow-shape': 'triangle',
+            'line-color': '#00ade6',
+            'target-arrow-color': '#00ade6'
           })
         .selector(':selected')
           .css({
             'background-color': 'black',
             'line-color': 'black',
-            'target-arrow-color': 'black',
+            'target-arrow-color': 'black',\
             'source-arrow-color': 'black'
           })
         .selector('.faded')
@@ -269,15 +276,5 @@
 
   </script>
 
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48711052-1', 'corals.herokuapp.com');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>
