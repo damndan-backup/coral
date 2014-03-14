@@ -20,8 +20,8 @@ var UserSchema = new Mongoose.Schema({
 	"password": String
 });
 var FollowSchema = new Mongoose.Schema({
-  "follower": String,
-  "followee": String
+  "web": String,
+  "follower": String
 })
 
 exports.Web = Mongoose.model('Web', WebSchema);

@@ -34,3 +34,29 @@ exports.altview = function(req, res){
 	}
 	
 }
+
+exports.invite = function(req, res){
+	var web = req.params.webID;
+	var follower = req.params.follower;
+
+	models.Follow
+	.find( {"name": follower} )
+	.exec(afterQuery);
+	function afterQuery(err, follower) {
+		if(err) {console.log(err); res.send(500); }
+		if(follower.size > 0) {
+			var newFollow = new models.Follow({
+				"web": web,
+				"follower": follower['_id']
+			});
+				newFollow.save(function afterSaving(err, post) {
+					if(err) {console.log(err); res.send(500); }
+					var url = "web.handlebars/" + webID;
+					res.redirect(url);
+				});
+		} else {
+			var url = "web.handlebars/" + webID;
+			res.redirect(url);
+		}
+	}
+}

@@ -2,7 +2,7 @@ var models = require("../models");
 
 exports.view = function(req, res){
 	models.Web
-	.find( {} )
+	.find( {"follower": req.session.userID} )
 	.sort('-date')
 	.exec(function goToHomepage(err, webs) {
 		res.render('homepage',{
