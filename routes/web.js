@@ -21,45 +21,32 @@ exports.view = function(req, res){
 	
 };
 
-
-//alternate view for reiteration of design
-exports.altview = function(req, res){
-	var web = req.params.webID
-	models.Post
-	.find( {"web": web} )
-	.exec(afterQuery);
-	function afterQuery(err, nodes) {
-		if(err) {console.log(err); res.send(500); }
-		res.render('webalt',{
-		"web": web,
-		"node": nodes,
-		"userID": req.session.userID
-	});
-	}
-	
-}
-
 exports.invite = function(req, res){
 	var web = req.params.webID;
 	var follower = req.query.follower;
 
-	models.Follow
+	console.log(follower);
+
+	models.User
 	.find( {"name": follower} )
 	.exec(afterQuery);
-	function afterQuery(err, follower) {
+	function afterQuery(err, user) {
 		if(err) {console.log(err); res.send(500); }
-		if(follower.size > 0) {
+		if(user.length > 0) {
+			console.log("found");
+			console.log(user[0]['_id']);
 			var newFollow = new models.Follow({
 				"web": web,
-				"follower": follower['_id']
+				"follower": user[0]['_id']
 			});
 				newFollow.save(function afterSaving(err, post) {
 					if(err) {console.log(err); res.send(500); }
-					var url = "web.handlebars/" + webID;
+					var url = "web.handlebars/" + web;
 					res.redirect(url);
 				});
 		} else {
-			var url = "web.handlebars/" + webID;
+			console.log("not found");
+			var url = "web.handlebars/" + web;
 			res.redirect(url);
 		}
 	}
