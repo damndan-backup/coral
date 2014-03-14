@@ -64,27 +64,31 @@
 
         <!-- popup form #1 -->
         <a href="#x" class="overlay" id="login_form"></a>
-        <div class="popup" style="opacity: 1">
-            <h2>Welcome Guest!</h2>
-            <p>Please enter your login and password here</p>
-            <div>
-                <label for="login">Login</label>
-                <input type="text" id="login" value="" />
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" value="" />
-            </div>
-            <input type="button" value="Log In" />
+          
+          <div class="popup" style="opacity: 1">
 
-            <a class="close" href="#close"></a>
-        </div>
+              <p>Type a friend's username <br>to invite to web</p>
+              <form role="form" method="get" action="/invite">
+                <div>
+                    <span>Friend's Username</span>
+                    <input type="text" name="follower" class="form-control" required/>
+                </div>
+                
+                <button type="submit" class="submit-button btn btn-embossed btn-inverse" style="margin-top: 30px">Invite to Web</button>
+                
+              </form>
+              <a class="close" href="#close"></a>
+          </div>
 
-            <a class="close" href="#close"></a>
-        </div>
+              <a class="close" href="#close"></a>
+          </div>
+        
 
     </div>
   
+
+
+
 
      <!-- Bottom Nav Bar --> 
   <div class="bottom-holder">

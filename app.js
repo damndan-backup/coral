@@ -76,6 +76,7 @@ app.get('/addPost/:webID/:parentID', post.addPost);
 app.get('/loginFunction', login.loginFunction);
 app.get('/create', createAccount.create);
 app.get('/logOut', account.logOut);
+app.get('/invite/:webID', web.invite);
 //app.get('/index2', index.view2);
 //app.get('/homepage2/:userID', homepage.view2);
 

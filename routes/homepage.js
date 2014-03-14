@@ -5,7 +5,7 @@ exports.view = function(req, res){
 		res.redirect("/login.handlebars");
 	} else {
 		models.Web
-		.find( {} )
+		.find( {"follower": req.session.userID} )
 		.sort('-date')
 		.exec(function goToHomepage(err, webs) {
 			res.render('homepage',{
