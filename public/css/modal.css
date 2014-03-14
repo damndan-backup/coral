@@ -1,28 +1,5 @@
-.main {
-   opacity: 1;
-}
-.panel {
-    background-color: #000;
-}
-.panel a#login_pop, .panel a#join_pop {
-    border: 2px solid #aaa;
-    color: #fff;
-    display: block;
-    float: right;
-    margin-right: 10px;
-    padding: 5px 10px;
-    text-decoration: none;
-    text-shadow: 1px 1px #000;
 
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-}
-a#login_pop:hover, a#join_pop:hover {
-    border-color: #eee;
-}
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -47,7 +24,6 @@ a#login_pop:hover, a#join_pop:hover {
 }
 .popup {
     background-color: #fff;
-    border: 3px solid #fff;
     display: inline-block;
     left: 50%;
     opacity: 0;
@@ -71,12 +47,6 @@ a#login_pop:hover, a#join_pop:hover {
     -o-border-radius: 10px;
     border-radius: 10px;
 
-    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-
     -webkit-transition: opacity .5s, top .5s;
     -moz-transition: opacity .5s, top .5s;
     -ms-transition: opacity .5s, top .5s;
@@ -87,13 +57,18 @@ a#login_pop:hover, a#join_pop:hover {
     top: 50%;
     opacity: 1;
     visibility: visible;
+    width: 80%;
+    text-align: left;
+    z-index: 20;
+    border: 2px solid #00ade6;
 }
 .close {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #00ade6;
+    opacity: 0.9;
     height: 30px;
     line-height: 30px;
     position: absolute;
-    right: 0;
+    left: 93%;
     text-align: center;
     text-decoration: none;
     top: -15px;
@@ -120,11 +95,11 @@ a#login_pop:hover, a#join_pop:hover {
 .popup label {
     display: inline-block;
     text-align: left;
-    width: 120px;
+    width: 80%;
 }
 .popup input[type="text"], .popup input[type="password"] {
     border: 1px solid;
-    border-color: #999 #ccc #ccc;
+    border-color: #00ade6;
     margin: 0;
     padding: 2px;
 
@@ -135,5 +110,5 @@ a#login_pop:hover, a#join_pop:hover {
     border-radius: 2px;
 }
 .popup input[type="text"]:hover, .popup input[type="password"]:hover {
-    border-color: #555 #888 #888;
+    border-color: #00ade6;
 }
