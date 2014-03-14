@@ -21,7 +21,7 @@ exports.addWeb = function(req, res){
 	newWeb.save(function afterNewWeb(err, web) {
 			if(err) {console.log(err); res.send(500); }
 			var newPost = new models.Post({
-				"message": "Create New Post!",
+				"message": web['title'],
 				"date": date.getTime(),
 				"creator": req.session.userID,
   				"parent": "-1",

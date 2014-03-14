@@ -37,7 +37,7 @@ exports.addPost = function(req, res){
 	.find({"web": webID, "parent": "-1"})
 	.exec(checkStart);
 	function checkStart(err, posts) {
-		if(posts.length != 0) {
+		/*if(posts.length != 0) {
 			console.log("message is " + message);
 			models.Post
 			.find({"web": webID, "parent": "-1"})
@@ -47,7 +47,7 @@ exports.addPost = function(req, res){
 				if(err) {console.log(err); res.send(500); }
 			}
 			parentID = 0;
-		} 
+		}*/
 		var newPost = new models.Post({
 			"message": message,
 			"date": date.getTime(),
