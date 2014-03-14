@@ -34,7 +34,6 @@
 
   <link href="/css/coral.css" rel="stylesheet">
 
-  <link href="/css/layout.css" rel="stylesheet" type="text/css" />
   <link href="/css/modal.css" rel="stylesheet" type="text/css" />
 
 
@@ -48,45 +47,38 @@
 <body>
 
      <!-- Header -->
-   
+  
     <div class="header-gen">
         <h1 id="nexa-light-header" style="color: #00ADE6" class="title">web</h1>
         <section id="wrapper" style="margin-top: -55px; margin-left: 90%; color: #00ADE6">
         <article id="popUpBtn" class="ion-help-circled"></article>
         </section>
+         
+         
 
-        <!-- panel with buttons -->
-        <div class="main">
-            <div class="panel">
-                <a href="#login_form" id="login_pop">Log In</a>
-            </div>
-        </div>
+         <!-- panel with buttons -->
 
-        <!-- popup form #1 -->
-        <a href="#x" class="overlay" id="login_form"></a>
-          
-          <div class="popup" style="opacity: 1">
-
-              <p>Type a friend's username <br>to invite to web</p>
-              <form role="form" method="get" action="/invite">
-                <div>
-                    <span>Friend's Username</span>
-                    <input type="text" name="follower" class="form-control" required/>
-                </div>
-                
-                <button type="submit" class="submit-button btn btn-embossed btn-inverse" style="margin-top: 30px">Invite to Web</button>
-                
-              </form>
-              <a class="close" href="#close"></a>
-          </div>
-
-              <a class="close" href="#close"></a>
-          </div>
-        
+        <a href="#login_form" class="ion-person-add" id="login_pop" style="position: absolute; margin-top: -24px; left: 5%; color: #00ade6"></a>
 
     </div>
   
+<!-- popup form #1 -->
+        <a href="#x" class="overlay" id="login_form"></a>
+          
+          <div class="popup" style="opacity: 1">
+              <p style="font-weight: bold; text-align: center">Type a friend's username to invite to web</p>
+              <form role="form" method="get" action="/invite">
+                <div>
+                    <span>Friend's Username</span>
+                    <input type="text" name="follower" placeholder="Who do you want to invite?" class="form-control" required/>
+                </div>
+                
+                <button type="submit" class="submit-button btn btn-embossed btn-inverse">Invite to Web</button>
+              </form>
 
+                <a href="#close"><button type="button" class="submit-button btn btn-embossed btn-info" style="opacity: 0.7">Cancel</button></a>
+    
+          </div>
 
 
 

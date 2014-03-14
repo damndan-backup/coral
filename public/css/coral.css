@@ -2309,9 +2309,6 @@ img.cover-photo {
 }
 
 
-
-
-
 .navbutton {
 		width: 45%;
     opacity:0.93;
@@ -2382,7 +2379,7 @@ a.section-text {
 
 .cancel-button {
 	width: 96%;
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .user-name {
