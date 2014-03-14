@@ -54,7 +54,7 @@
     transition: opacity .5s, top .5s;
 }
 .overlay:target+.popup {
-    top: 45%;
+    top: 50%;
     opacity: 1;
     visibility: visible;
     width: 80%;
