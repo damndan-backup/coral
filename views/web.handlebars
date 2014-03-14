@@ -34,6 +34,9 @@
 
   <link href="/css/coral.css" rel="stylesheet">
 
+  <link href="/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="/css/modal.css" rel="stylesheet" type="text/css" />
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <meta charset=utf-8 />
@@ -51,6 +54,35 @@
         <section id="wrapper" style="margin-top: -55px; margin-left: 90%; color: #00ADE6">
         <article id="popUpBtn" class="ion-help-circled"></article>
         </section>
+
+        <!-- panel with buttons -->
+        <div class="main">
+            <div class="panel">
+                <a href="#login_form" id="login_pop">Log In</a>
+            </div>
+        </div>
+
+        <!-- popup form #1 -->
+        <a href="#x" class="overlay" id="login_form"></a>
+        <div class="popup" style="opacity: 1">
+            <h2>Welcome Guest!</h2>
+            <p>Please enter your login and password here</p>
+            <div>
+                <label for="login">Login</label>
+                <input type="text" id="login" value="" />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" value="" />
+            </div>
+            <input type="button" value="Log In" />
+
+            <a class="close" href="#close"></a>
+        </div>
+
+            <a class="close" href="#close"></a>
+        </div>
+
     </div>
   
 
@@ -66,12 +98,10 @@
 
 
 
+
+
+
   <div id="cy"></div>
-
-
-
-
-
   <script>
     $(function(){ // on dom ready
 

@@ -2,24 +2,28 @@ var models = require("../models");
 var mongoose = require("mongoose");
 var ObjectId = mongoose.Types.ObjectId;
 exports.view = function(req, res){
-	var webID = req.params.webID;
-	var postID = req.params.postID;
-	var date = new Date();
-	var message = req.query.message;
+	if(req.session.userID == null) {
+		res.redirect("/login.handlebars");
+	} else {
+		var webID = req.params.webID;
+		var postID = req.params.postID;
+		var date = new Date();
+		var message = req.query.message;
 
 
-	models.Post
-	.find( {"_id": new ObjectId(postID)} )
-	.exec(goToPosts);
-	function goToPosts(err, post) {
-		if(err) {console.log(err); res.send(500); }
-		console.log("current post is " + post);
-		res.render('post',{
-			"webID": webID,
-			"postID": postID,
-			"message": post[0]['message'],
-			"userID": req.session.userID
-		});
+		models.Post
+		.find( {"_id": new ObjectId(postID)} )
+		.exec(goToPosts);
+		function goToPosts(err, post) {
+			if(err) {console.log(err); res.send(500); }
+			console.log("current post is " + post);
+			res.render('post',{
+				"webID": webID,
+				"postID": postID,
+				"message": post[0]['message'],
+				"userID": req.session.userID
+			});
+		}
 	}
 };
 

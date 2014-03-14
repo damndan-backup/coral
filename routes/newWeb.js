@@ -1,9 +1,13 @@
 var models = require("../models");
 
 exports.view = function(req, res){
-	res.render('newWeb',{
-		'userID': req.session.userID
-	});
+	if(req.session.userID == null) {
+		res.redirect("/login.handlebars");
+	} else {
+		res.render('newWeb',{
+			'userID': req.session.userID
+		});
+	}
 };
 
 exports.addWeb = function(req, res){
