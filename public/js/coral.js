@@ -37,3 +37,4 @@ setTimeout(function() {
   overlayElement.style.opacity = 0.4;
   overlayElement.addEventListener("click", hidePopUpMessage, false);
 }, 300);
+
